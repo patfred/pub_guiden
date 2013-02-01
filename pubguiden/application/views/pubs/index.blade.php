@@ -11,12 +11,12 @@
 	    			Nej
 	    			@else
 	    			Ja
-	    		@endif
+	    		@endif</dd>
 		<dd>After Work? @if($pub->after_work == 0)
 	    			Nej
 	    			@else
 	    			Ja
-	    		@endif
+	    		@endif</dd>
 	@endforeach
 </dl>
 
