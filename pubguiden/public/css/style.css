@@ -1,0 +1,85 @@
+@import url('font-awesome.min.css');
+@import url('museo-300.css');
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+/****** General styles *********/  
+body,p,input,dl,dt {
+	font-family: 'museo_slab300' serif;
+	font-weight: 300;
+	line-height: normal;
+}
+h1,h2,h3,h4,h5{
+	font-family: 'Lobster', cursive;
+}
+a {
+	text-decoration: none; 
+	color:#f2f2f2;
+}
+a:hover{
+	color:#96af5b;
+	text-decoration: none;
+}
+body{
+	background: url('../img/bg1.png');
+}
+/****** Common styles *********/  
+
+.content{padding-top: 90px;} /*Because of the fixed positioned top-bar we need this*/
+.content-holder{
+	background: url('../img/bg.png');
+	margin: 5px 20px 15px 20px;
+	border-radius:5px;
+	-webkit-box-shadow: 0 8px 6px -6px #000;
+  	-moz-box-shadow: 0 8px 6px -6px #000;
+  	box-shadow: 0 8px 6px -6px #000;
+  	padding: 10px 15px 10px 15px;
+}
+
+/****** Top-bar styles *********/  
+.menu-top{
+	background: url('../img/bg.png');
+ 	border-bottom: 3px solid #96af5b;;
+ 	padding: 10px;
+ 	-webkit-box-shadow: 0 8px 6px -6px #444;
+  	-moz-box-shadow: 0 8px 6px -6px #444;
+  	box-shadow: 0 8px 6px -6px #444;
+}
+.menu-top .logo{
+	font-family: 'Lobster', cursive;
+  	text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+	font-size: 2.3em;
+	color:#96af5b;
+	margin-top: 10px;
+}
+.menu-top .menu-icons{
+	margin:10px 0px 0px 35px;
+	color:rgb(255, 255, 255);
+	float:right;
+}
+
+/****** Top-bar styles *********/  
+.home-menu{	
+	font-size: 1.5em;
+	padding: 20px 15px 0px 15px;
+	height:50px;
+}
+.home-menu i{
+	color:#96af5b;
+	float:right;
+}
+.home-search {
+	font-size: 0.9em;
+	color:rgb(43, 43, 43);
+	height:28px;
+	border-radius: 5px;
+	border:none;
+}
+
+/****** Top-bar styles *********/  
+.content-holder dt{
+	margin-bottom: 10px;
+}
+.content-holder dt i{
+	margin-right:10px;
+	color:#96af5b;
+}
