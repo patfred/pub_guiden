@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Pubguiden</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/bootstrap-responsive.css"></link>
-        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <?php echo HTML::style('css/bootstrap.min.css'); ?>
+        <?php echo HTML::style('css/bootstrap-responsive.css'); ?>
+        <?php echo HTML::style('css/style.css'); ?>
         <!-- {{ Asset::styles() }}
         {{ Asset::scripts() }} -->
     </head>
@@ -27,7 +27,7 @@
             <p> &copy; Pubguiden 2013</p>
         </footer>
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <?php echo HTML::script('http://code.jquery.com/jquery-latest.js');?>
+    <?php echo HTML::script('js/bootstrap.min.js');?>   
     </body>
 </html>
