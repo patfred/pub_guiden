@@ -1,7 +1,7 @@
 @layout('layouts/main')
 
-
-<p>
-	Här är pubs vyn
-</p>
-
+@section('content')
+	<p>
+		Här är pubs vyn
+	</p>
+@endsection

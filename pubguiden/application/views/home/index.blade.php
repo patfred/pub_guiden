@@ -25,7 +25,7 @@
 	<div class="content-holder"> 
 		<dl>
 			@foreach($pubs as $pub)
-				<dt> <i class="icon-map-marker"></i>{{ HTML::link_to_action("pub@view", $pub->name, array($pub->id)) }} </dt>
+				<dt> <i class="icon-map-marker"></i>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </dt>
 			@endforeach
 		</dl>
 	</div>	
