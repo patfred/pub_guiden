@@ -5,11 +5,9 @@
 			<input type="text" class="home-search search-query" placeholder="Sök" > 
 			<a href="#"><i class="icon-search icon-large"></i> </a> 
 		</div>
-		<a href="#">
-			<div class="home-menu content-holder">  Topp 20  
+			<div class="home-menu content-holder">  {{ HTML::link_to_action("results@top20", "Topp 20") }}  
 				<i class="icon-angle-right icon-large"></i> 
 			</div>
-		</a>
 		<a href="#">
 			<div class="home-menu content-holder">  Pubar nära dig  
 				<i class="icon-angle-right icon-large"></i> 

@@ -1,5 +1,5 @@
 @layout('layouts/main')
 
 <p>
-	Här är pubs vyn
+	Här är results vyn
 </p>

@@ -2,6 +2,20 @@
 
 class Home_Controller extends Base_Controller {
 
+	public function action_index()
+	{
+		$pubs = Pub::all();		
+		return View::make('home.index')
+				->with('pubs', $pubs);
+	}
+
+	public function action_top20()
+	{
+		$pubs = Pub::all();		
+		return View::make('results.top20')
+				->with('pubs', $pubs);	
+	}
+
 	/*
 	|--------------------------------------------------------------------------
 	| The Default Controller
@@ -29,12 +43,5 @@ class Home_Controller extends Base_Controller {
 	|		}
 	|
 	*/
-
-	public function action_index()
-	{
-		$pubs = Pub::all();		
-		return View::make('home.index')
-				->with('pubs', $pubs);
-	}
 
 }
