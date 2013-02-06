@@ -3,7 +3,7 @@
 @section('content')
 <section class="content">	
 	<p>
-		Här är pubs vyn
+		Pub-namn här!
 	</p>
 </section>	
 @endsection
