@@ -13,9 +13,9 @@
 
         <header class="menu-top navbar navbar-fixed-top">
         @section('navigation')
-                <a href="#" class="logo">
-                    <i class="icon-beer icon-large"></i> Pubguiden Gbg
-                </a>
+                <span class="logo">
+                    <i class="icon-beer icon-large"></i> {{ HTML::link_to_action("home", "Pubguiden Gbg") }}  
+                </span>
                 <a href="#" class="menu-icons"> <i class="icon-search icon-2x"></i></a>
                 <a href="#" class="menu-icons"> <i class="icon-user icon-2x"></i></a>
          @yield_section
