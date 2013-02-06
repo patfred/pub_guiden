@@ -35,7 +35,9 @@ Route::controller('home');
 // Route::get('pubs', array('as'=>'pubs', 'uses'=>'pubs@index'));
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
 
-Route::get('results/top20',array('as'=>'results','uses'=>'results@top20'));
+Route::get('results/top20',array('as'=>'result','uses'=>'results@top20'));
+
+Route::get('categories/index', 'home@categories');
 
 /*
 |--------------------------------------------------------------------------

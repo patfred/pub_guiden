@@ -16,6 +16,11 @@ class Home_Controller extends Base_Controller {
 				->with('pubs', $pubs);	
 	}
 
+	public function action_categories()
+	{
+	    return View::make('categories.index');
+	}
+}
 	/*
 	|--------------------------------------------------------------------------
 	| The Default Controller
@@ -43,5 +48,3 @@ class Home_Controller extends Base_Controller {
 	|		}
 	|
 	*/
-
-}

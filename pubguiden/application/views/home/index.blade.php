@@ -13,11 +13,9 @@
 				<i class="icon-angle-right icon-large"></i> 
 			</div>
 		</a>
-		<a href="#">
-			<div class="home-menu content-holder"> Kategorier
+			<div class="home-menu content-holder"> {{ HTML::link_to_action("categories@index", "Kategorier") }}  
 				<i class="icon-angle-right icon-large"></i> 
 			</div>
-		</a>
 	</section>
 
 	<div class="content-holder"> 
