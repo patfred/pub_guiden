@@ -1,5 +1,6 @@
 @layout('layouts/main') 
 @section('content')
+<section class="content">
 <dl>
     <dt>{{ $pub->name }} </dt>
 	    <dd>{{ $pub->description }} </dd>
@@ -16,4 +17,5 @@
 	    			Ja
 	    		@endif</dd>
 </dl>
+</section>
 @endsection
