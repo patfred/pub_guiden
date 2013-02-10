@@ -31,6 +31,7 @@
 |
 */
 Route::controller('home');
+Route::controller('ratings');
 
 // Route::get('pubs', array('as'=>'pubs', 'uses'=>'pubs@index'));
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));

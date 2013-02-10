@@ -1,21 +1,24 @@
-@layout('layouts/main') 
+@layout('layouts/main')
 @section('content')
 <section class="content">
-<dl>
-    <dt>{{ $pub->name }} </dt>
-	    <dd>{{ $pub->description }} </dd>
-	    <dd>Adress: {{ $pub->address}}</dd>
-	    <dd>Billigaste öl: {{ $pub->lowest_price }} kr</dd>
-	    <dd>Quiz? @if($pub->quiz == 0)
+<h2> {{ $pub->name }} </h2>
+
+<ul>
+	<li> {{ $pub->description }} </li>
+	<li>Adress: {{ $pub->address}}</li>
+	<li>Billigaste öl: {{ $pub->lowest_price }} kr</li>
+	<li>Quiz? @if($pub->quiz == 0)
 	    			Nej
 	    			@else
 	    			Ja
-	    		@endif</dd>
-		<dd>After Work? @if($pub->after_work == 0)
+	    		@endif</li>
+	<li>After Work? @if($pub->after_work == 0)
 	    			Nej
 	    			@else
 	    			Ja
-	    		@endif</dd>
-</dl>
+	    		@endif</li>
+</ul>
+{{ HTML::link_to_action("ratings@index", $pub->name, $pub->id) }}
+
 </section>
 @endsection

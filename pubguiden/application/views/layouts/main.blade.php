@@ -6,6 +6,7 @@
         <?php echo HTML::style('css/bootstrap.min.css'); ?>
         <?php echo HTML::style('css/bootstrap-responsive.css'); ?>
         <?php echo HTML::style('css/style.css'); ?>
+        <?php echo HTML::style('css/jQuery.Rating.css'); ?>
         <!-- {{ Asset::styles() }}
         {{ Asset::scripts() }} -->
     </head>
@@ -41,7 +42,8 @@
 
     <?php echo HTML::script('http://code.jquery.com/jquery-latest.js');?>
     <?php echo HTML::script('js/bootstrap.min.js');?>   
-    <?php echo HTML::script('js/app.js');?>   
-
+    <?php echo HTML::script('js/app.js');?> 
+    <?php echo HTML::script('js/jquery.js');?>
+    <?php echo HTML::script('js/jquery.rating.pack.js');?>  
     </body>
 </html>
