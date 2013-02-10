@@ -1,4 +1,4 @@
-@layout('layouts/main')
+@layout('layouts/main') 
 @section('content')
 <section class="content">
 <h2> {{ $pub->name }} </h2>
@@ -18,7 +18,9 @@
 	    			Ja
 	    		@endif</li>
 </ul>
-{{ HTML::link_to_action("ratings@index", $pub->name, $pub->id) }}
 
+<a href="<?php echo URL::to_action('ratings@index') ?>">
+				<button>Sätt betyg</button>
+</a>
 </section>
 @endsection
