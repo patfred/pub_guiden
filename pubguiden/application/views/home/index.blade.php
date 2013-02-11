@@ -11,7 +11,7 @@
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>		
-		<a href="#">
+		<a href="<?php echo URL::to_action('results@nearestPubs') ?>">
 			<div class='home-menu content-holder'>
 				Pubar nära dig
 				<i class="icon-angle-right icon-large"></i>
