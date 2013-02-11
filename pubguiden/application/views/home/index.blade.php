@@ -1,6 +1,6 @@
 @layout('layouts/main')
 @section('content')
-	<section class="content">	
+	<section class="content container">	
 		<div class="home-menu content-holder">   
 			<input type="text" class="home-search search-query" placeholder="Sök" > 
 			<a href="#"><i class="icon-search icon-large"></i> </a> 
@@ -24,7 +24,7 @@
 			</div>
 		</a>	
 	</section>
-	<div class="content-holder"> 
+	<div class="content-holder container"> 
 		<dl>
 			@foreach($pubs as $pub)
 				<dt> <i class="icon-map-marker"></i>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </dt>

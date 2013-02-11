@@ -6,7 +6,7 @@
         <?php echo HTML::style('css/bootstrap.min.css'); ?>
         <?php echo HTML::style('css/bootstrap-responsive.css'); ?>
         <?php echo HTML::style('css/style.css'); ?>
-        <?php echo HTML::style('css/jQuery.Rating.css'); ?>
+        <?php echo HTML::style('css/jquery.rating.css'); ?>
         <!-- {{ Asset::styles() }}
         {{ Asset::scripts() }} -->
     </head>
@@ -36,14 +36,13 @@
 
         @yield('content') 
         
-        <footer>
+        <footer class="container">
             <p> &copy; Pubguiden 2013</p>
         </footer>
 
-    <?php echo HTML::script('http://code.jquery.com/jquery-latest.js');?>
+    <?php echo HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');?> 
     <?php echo HTML::script('js/bootstrap.min.js');?>   
     <?php echo HTML::script('js/app.js');?> 
-    <?php echo HTML::script('js/jquery.js');?>
-    <?php echo HTML::script('js/jquery.rating.pack.js');?>  
+    <?php echo HTML::script('js/jquery.rating.js');?>  
     </body>
 </html>
