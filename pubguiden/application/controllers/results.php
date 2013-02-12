@@ -10,4 +10,11 @@ class Results_Controller extends Base_Controller {
 				->with('pubs', $pubs);	
 	}
 
+	public function get_nearestPubs()
+	{
+		$pubs = Pub::all();		
+		return View::make('results.nearestPubs')
+				->with('pubs', $pubs);	
+	}
+
 }
