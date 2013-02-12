@@ -31,11 +31,14 @@
 |
 */
 Route::controller('home');
+Route::controller('ratings');
+
 
 // Route::get('pubs', array('as'=>'pubs', 'uses'=>'pubs@index'));
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
 
 Route::get('results/top20',array('as'=>'result','uses'=>'results@top20'));
+Route::get('results/nearestPubs',array('as'=>'result','uses'=>'results@nearestPubs'));
 
 Route::get('categories/index', 'home@categories');
 
@@ -112,5 +115,5 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::to('login');
 });
 
-Route::controller('pub');
+
 
