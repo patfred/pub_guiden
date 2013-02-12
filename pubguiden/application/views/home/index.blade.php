@@ -25,10 +25,10 @@
 		</a>	
 	</section>
 	<div class="content-holder container"> 
-		<dl>
+		<ul>
 			@foreach($pubs as $pub)
-				<dt> <i class="icon-map-marker"></i>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </dt>
+				<li> <i class="icon-map-marker"></i>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </li>
 			@endforeach
-		</dl>
+		</ul>
 	</div>		
 @endsection
