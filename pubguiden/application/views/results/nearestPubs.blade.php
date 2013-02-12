@@ -2,10 +2,10 @@
 
 @section('content')
 <section class="content container">
-	<h2>Top 20</h2>	
+	<h2>Pubar nära dig</h2>	
 	<ul>
 		@foreach($pubs as $pub)
-			<li> <i class="icon-map-marker"></i>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </li>
+			<li>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </li>
 		@endforeach
 	</ul>
 </section>	

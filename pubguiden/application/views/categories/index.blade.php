@@ -1,6 +1,6 @@
 @layout('layouts/main')
 @section('content')
-	<section class="content">	
+	<section class="content container">	
 		<div class="home-menu content-holder">   
 			<input type="text" class="home-search search-query" placeholder="Sök" > 
 			<a href="#"><i class="icon-search icon-large"></i> </a>
