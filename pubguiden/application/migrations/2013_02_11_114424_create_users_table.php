@@ -9,8 +9,13 @@ class Create_Users_Table {
 	 */
 	public function up()
 	{
-		// Här kommer nice shit någon gång.
+		Schema::table("users", function($table) {
+            $table->create();
+            $table->increments("id");
+            $table->timestamps();
+        });
 	}
+
 
 	/**
 	 * Revert the changes to the database.
@@ -19,7 +24,7 @@ class Create_Users_Table {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop("users");
 	}
 
 }
