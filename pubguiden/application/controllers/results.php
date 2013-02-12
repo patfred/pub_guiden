@@ -9,5 +9,10 @@ class Results_Controller extends Base_Controller {
 		return View::make('results.top20')
 				->with('pubs', $pubs);	
 	}
-	
+
+	public function get_top_häst()
+	{
+		//Do stuff
+	}
+
 }
