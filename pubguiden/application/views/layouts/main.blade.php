@@ -44,5 +44,7 @@
     <?php echo HTML::script('js/bootstrap.min.js');?>   
     <?php echo HTML::script('js/app.js');?> 
     <?php echo HTML::script('js/jquery.rating.js');?>  
+    <?php echo HTML::script('js/geolocation.js');?>  
+
     </body>
 </html>
