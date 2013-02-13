@@ -9,5 +9,4 @@ class Results_Controller extends Base_Controller {
 		return View::make('results.top20')
 				->with('pubs', $pubs);	
 	}
-
 }
