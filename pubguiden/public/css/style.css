@@ -6,8 +6,8 @@
 	General
 ------------------------*/
 
-body,div,dl,dt,input,li,p,ul,button {
-	font-family: 'museo_slab300' serif;
+body, div, dl, dt, input, li, p, ul, button{
+	font-family: 'museo_slab300', serif;
 	font-weight: 300;
 	line-height: normal;
 }

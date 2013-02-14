@@ -33,7 +33,6 @@
 Route::controller('home');
 Route::controller('ratings');
 
-
 // Route::get('pubs', array('as'=>'pubs', 'uses'=>'pubs@index'));
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
 
@@ -41,6 +40,8 @@ Route::get('list_pubs/top20',array('as'=>'list_pubs','uses'=>'list_pubs@top20'))
 Route::get('list_pubs/nearestPubs',array('as'=>'list_pubs','uses'=>'list_pubs@nearestPubs'));
 
 Route::get('categories/index', 'home@categories');
+
+Route::post('search', array('before' => 'csrf', 'uses'=>'search@search'));
 
 /*
 |--------------------------------------------------------------------------
