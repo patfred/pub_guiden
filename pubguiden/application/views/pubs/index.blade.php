@@ -20,7 +20,7 @@
 	</ul>
 
 	<a href="<?php echo URL::to_action('ratings@index') ?>">
-	<button class="rate-button">Sätt betyg</button>
-</a>
+		<button class="rate-button">Sätt betyg</button>
+	</a>
 </section>
 @endsection
