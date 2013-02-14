@@ -28,7 +28,7 @@
                 <div id="show-login" class="show-hide"> 
                 
                     @if ( Auth::check())
-                        <button class="user-buttons"> <i class="icon-signout></i>{{ HTML::link(Config::get('myauth::config.bundle_route') . '/' . Config::get('myauth::config.logout_route'), 'Logga ut') }} </button>
+                        <button class="user-buttons"> <i class="icon-signout"></i>{{ HTML::link(Config::get('myauth::config.bundle_route') . '/' . Config::get('myauth::config.logout_route'), 'Logga ut') }} </button>
                     @else
                         <button class="user-buttons"> <i class="icon-signin"></i>{{ HTML::link(Config::get('myauth::config.bundle_route') . '/' . Config::get('myauth::config.login_route'), 'Logga in') }} </button>
                         <button class="user-buttons"> <i class="icon-edit"></i>{{ HTML::link(Config::get('myauth::config.bundle_route') . '/' . Config::get('myauth::config.signup_route'), 'Registrera dig') }} </button>
