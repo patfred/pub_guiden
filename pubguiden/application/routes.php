@@ -37,8 +37,8 @@ Route::controller('ratings');
 // Route::get('pubs', array('as'=>'pubs', 'uses'=>'pubs@index'));
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
 
-Route::get('results/top20',array('as'=>'result','uses'=>'results@top20'));
-Route::get('results/nearestPubs',array('as'=>'result','uses'=>'results@nearestPubs'));
+Route::get('list_pubs/top20',array('as'=>'list_pubs','uses'=>'list_pubs@top20'));
+Route::get('list_pubs/nearestPubs',array('as'=>'list_pubs','uses'=>'list_pubs@nearestPubs'));
 
 Route::get('categories/index', 'home@categories');
 

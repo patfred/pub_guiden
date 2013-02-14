@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Pubguiden</title>
+        <?php echo HTML::script('js/modernizr.js');?>  
         <?php echo HTML::style('css/bootstrap.min.css'); ?>
         <?php echo HTML::style('css/bootstrap-responsive.css'); ?>
         <?php echo HTML::style('css/style.css'); ?>

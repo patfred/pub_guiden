@@ -12,7 +12,7 @@ class Home_Controller extends Base_Controller {
 	public function action_top20()
 	{
 		$pubs = Pub::all();		
-		return View::make('results.top20')
+		return View::make('list_pubs.top20')
 				->with('pubs', $pubs);	
 	}
 

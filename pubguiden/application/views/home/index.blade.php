@@ -5,13 +5,13 @@
 			<input type="text" class="home-search search-query" placeholder="Sök" > 
 			<a href="#"><i class="icon-search icon-large"></i> </a> 
 		</div>
-		<a href="<?php echo URL::to_action('results@top20') ?>">
+		<a href="<?php echo URL::to_action('list_pubs@top20') ?>">
 			<div class='home-menu content-holder'>
 				Topp 20
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>		
-		<a href="<?php echo URL::to_action('results@nearestPubs') ?>">
+		<a href="<?php echo URL::to_action('list_pubs@nearestPubs') ?>">
 			<div class='home-menu content-holder'>
 				Pubar nära dig
 				<i class="icon-angle-right icon-large"></i>
