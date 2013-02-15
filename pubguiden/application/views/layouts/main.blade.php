@@ -29,7 +29,7 @@
             
             <div class="menu-box">
                 <div id="show-search" class="show-hide"> 
-                    {{ Form::open('search', 'POST', array('id' => 'search', 'class'=>'search_form')) }}
+                    {{ Form::open('search/index', 'POST', array('id' => 'search', 'class'=>'search_form')) }}
                     {{ Form::token() }}
                     {{ Form::text('search_string','', array('id'=> 'search_string', 'class' => 'search_string', 'placeholder'=>'Sök...')) }}
                     {{ Form::submit('sök') }}

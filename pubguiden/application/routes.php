@@ -41,7 +41,9 @@ Route::get('list_pubs/nearestPubs',array('as'=>'list_pubs','uses'=>'list_pubs@ne
 
 Route::get('categories/index', 'home@categories');
 
-Route::post('search', array('before' => 'csrf', 'uses'=>'search@search'));
+Route::post('search/index', array('before' => 'csrf', 'uses'=>'search@index'));
+Route::post('search/ooops', array('before' => 'csrf', 'uses'=>'search@ooops'));
+
 
 /*
 |--------------------------------------------------------------------------
