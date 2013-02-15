@@ -8,18 +8,18 @@ class Search_Controller extends Base_Controller {
 		if(Input::get('search_string') != '') {
 			$search_string = Input::get('search_string');
 			$results = Pub::where('name', 'like', $search_string)->get();
-		
-			return View::make('search.index')
-				->with('title', 'Sökresultat')
-				->with('search_string', $search_string)
-				->with('results', $results);
-		}
-		
+			if($results) {
+				return View::make('search.index')
+					->with('title', 'Sökresultat')
+					->with('search_string', $search_string)
+					->with('results', $results);
+			}
+			else {
+				return View::make('search/ooops');
+			}
+		}		
 		else {
-			return View::make('search/ooops');
-			
+			return View::make('search/ooops');			
 		}
-	}
-
-	
+	}	
 }

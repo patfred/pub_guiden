@@ -6,7 +6,7 @@
         <span class="notification">{{ Session::get('notification') }}</span>
     @endif
     
-		<p>Försök igen!</p>
+		<p>Din sökning gav inga träffar. Försök igen!</p>
 		
 		
 		
