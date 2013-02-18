@@ -120,7 +120,10 @@ ul{
 	display:block;
 }
 .rate-button{
-
+	width: 50px;
+}
+.rate-button a {
+	display: block;
 }
 
 /*-----------------------

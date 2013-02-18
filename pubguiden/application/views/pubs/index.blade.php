@@ -18,9 +18,11 @@
 		    			Ja
 		    		@endif</li>
 	</ul>
+<div class='rate-button'>
 
-	<a href="<?php echo URL::to_action('ratings@index') ?>">
-		<button class="rate-button">Sätt betyg</button>
-	</a>
+{{ HTML::link_to_action("ratings@index", 'Sätt betyg', array($pub->id)) }}
+	
+</div>
+
 </section>
 @endsection

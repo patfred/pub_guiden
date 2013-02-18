@@ -1,8 +1,11 @@
 @layout('layouts/main')
 @section('content')
 <section class='content container ratings'>
-	
-<h2>Sätt betyg på [pubnamn]</h2>
+@foreach($pubs as $pub)
+<h2>Sätt betyg på {{$pub->name}}</h2>
+
+
+
 
 
 {{ Form::open('my/route') }}
@@ -57,5 +60,6 @@
 
 	{{ Form::submit('Skicka') }}
 	{{ Form::close() }}
+	@endforeach
 </section>
 @endsection
