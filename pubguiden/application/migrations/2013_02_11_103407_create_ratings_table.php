@@ -12,6 +12,8 @@ class Create_Ratings_Table {
 		Schema::table("ratings", function($table) {
             $table->create();
             $table->increments("id");
+            $table->integer("pub_id");
+            $table->integer("user_id");
             $table->integer("service");
             $table->integer("atmosphere");
             $table->integer("food");

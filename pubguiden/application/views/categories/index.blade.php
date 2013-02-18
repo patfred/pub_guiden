@@ -37,3 +37,7 @@
 		</a>
 	</section>
 @endsection
+
+{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }}
+
+<a href="<?php echo URL::to_action('list_pubs@nearestPubs') ?>">

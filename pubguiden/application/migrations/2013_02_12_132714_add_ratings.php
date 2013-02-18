@@ -11,6 +11,8 @@ class Add_Ratings {
 	{
 		DB::table("ratings")->insert(
         array(
+            'user_id' => '1',
+            'pub_id' => '1',
             'service' => '5',
             'atmosphere' => '5',
             'food' => '5',
@@ -23,6 +25,8 @@ class Add_Ratings {
 
     	DB::table("ratings")->insert(
         array(
+            'user_id' => '1',
+            'pub_id' => '2',
             'service' => '2',
             'atmosphere' => '2',
             'food' => '2',
@@ -35,6 +39,8 @@ class Add_Ratings {
 
     	DB::table("ratings")->insert(
         array(
+            'user_id' => '1',
+            'pub_id' => '3',
             'service' => '4',
             'atmosphere' => '4',
             'food' => '4',
@@ -47,6 +53,8 @@ class Add_Ratings {
 
     	DB::table("ratings")->insert(
         array(
+            'user_id' => '1',
+            'pub_id' => '4',
             'service' => '3',
             'atmosphere' => '3',
             'food' => '3',
@@ -59,6 +67,8 @@ class Add_Ratings {
 
     	DB::table("ratings")->insert(
         array(
+            'user_id' => '1',
+            'pub_id' => '5',
             'service' => '1',
             'atmosphere' => '1',
             'food' => '1',

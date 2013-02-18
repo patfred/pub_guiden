@@ -23,12 +23,5 @@
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>	
-	</section>
-	<div class="content-holder container"> 
-		<ul>
-			@foreach($pubs as $pub)
-				<li> <i class="icon-map-marker"></i>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </li>
-			@endforeach
-		</ul>
-	</div>		
+	</section>	
 @endsection
