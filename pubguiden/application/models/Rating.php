@@ -5,7 +5,10 @@ class Rating extends Eloquent {
 	public function pub()
      {
           return $this->belongs_to('Pub');
-          return $this->belongs_to('User');
      }
 	
+	public function user()
+     {
+          return $this->belongs_to('User');
+     }
 }

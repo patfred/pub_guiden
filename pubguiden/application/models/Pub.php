@@ -6,9 +6,12 @@ class Pub extends Eloquent {
 	public function rating()
 	{
 		return $this->has_many('Rating');
-		return $this->has_many('Comment');
 	}
 
+	public function comment()
+	{
+		return $this->has_many('Comment');
+	}
 }
 
 	
