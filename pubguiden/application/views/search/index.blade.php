@@ -5,12 +5,13 @@
 	  @if (Session::has('notification'))
         <span class="notification">{{ Session::get('notification') }}</span>
     @endif
-    
+    	<h2>Sökresultat</h2>
 		<p>Du sökte på "{{ $search_string }}"</p>
-		<p>Resultat:</p>
+		<ul>
 		
 		@foreach($results as $result) 
-			{{ $result->name }}
-			@endforeach
+			<li>{{ HTML::link_to_action("pubs@index", $result->name, array($result->id)) }} </li>
+		@endforeach
+	</ul>
 	</section>
 @endsection
