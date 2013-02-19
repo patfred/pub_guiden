@@ -22,13 +22,34 @@
 		    @endif
 		</li>
 	</ul>
-<div class='rate-button'>
+	
+	<div class="rate-button">
+		@if (isset(Auth::user()->id))
+			{{ HTML::link_to_action("ratings@index", 'Sätt betyg', array($pub->id)) }}
+		@else
+	  		{{ HTML::link('/login', 'Logga in för att sätta betyg.') }} 
+	 	@endif
+	</div>
+
 	@if (isset(Auth::user()->id))
-		{{ HTML::link_to_action("ratings@index", 'Sätt betyg', array($pub->id)) }}
-	@else
-  		{{ HTML::link('/login', 'Logga in för att sätta betyg.') }} 
- 	@endif
-</div>
+	
+	<div class="comments">
+		{{ Form::open()	}}	
+	    	
+	    	{{ Form::hidden('pub_id', $pub->id) }}
+	    	{{ Form::hidden('user_id', Auth::user()->id) }}
+	     	{{ Form::textarea('comment') }} 
+
+	     	{{ Form::submit('Posta kommentar') }}
+	    
+	    {{ Form::close() }}
+	</div>	
+	@endif
+
+	<div>
+	@foreach
+
+	</div>
 
 </section>
 @endsection

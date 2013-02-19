@@ -18,6 +18,11 @@
     @if (Session::has('notification'))
         <p class="notification"> <i class='icon-warning-sign'></i>{{ Session::get('notification') }}</p>
     @endif
+    
+    <!-- check for signup ok flash var -->
+    @if (Session::has('notification-signup'))
+        <p class="notification-signup"> <i class='icon-ok-circle'></i>{{ Session::get('notification-signup') }}</p>
+    @endif
 
     <!-- submit button -->
     <p>{{ Form::submit('Logga in') }}</p>

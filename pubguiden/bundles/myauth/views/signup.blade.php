@@ -12,6 +12,11 @@
         <span>{{ Form::label('email', 'E-mail') }}</span>
         <p>{{ Form::text('email', Input::old('email'), array('class' => 'well')) }}</p>
             <?php if($errors) echo '<p class="error">'.$errors->first('email').'</p>'; ?>
+
+        <!-- Username field -->
+        <span>{{ Form::label('username', 'Avändarnamn') }}</span>
+        <p>{{ Form::text('username', Input::old('username'), array('class' => 'well')) }}</p>
+            <?php if($errors) echo '<p class="error">'.$errors->first('username').'</p>'; ?>    
         
         <!-- password field -->
         <span>{{ Form::label('password', 'Lösenord') }}</span>

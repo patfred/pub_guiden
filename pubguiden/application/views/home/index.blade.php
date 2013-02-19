@@ -1,9 +1,9 @@
 @layout('layouts/main')
 @section('content')
 	<section class="content container">	
-		<div class="home-menu content-holder">   
-			<input type="text" class="home-search search-query" placeholder="Sök" > 
-			<a href="#"><i class="icon-search icon-large"></i> </a> 
+
+		<div class="content-badge">   
+		
 		</div>
 		<a href="<?php echo URL::to_action('list_pubs@top20') ?>">
 			<div class='home-menu content-holder'>
