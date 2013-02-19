@@ -51,8 +51,7 @@ Route::post('search/ooops', array('before'=>'csrf', 'uses'=>'search@ooops'));
 Route::get('admins', array('as'=>'admins', 'uses'=>'admins@index'));
 Route::get('admins/create', array('as'=>'create_pub','uses'=>'admins@create'));
 Route::post('admins/create', array('uses'=>'admins@create'));
-// Update
-Route::get('admins/update', array('as'=>'update_pub','uses'=>'admins@update'));
+
 
 
 /*
