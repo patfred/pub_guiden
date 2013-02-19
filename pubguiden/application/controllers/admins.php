@@ -27,5 +27,12 @@ class Admins_Controller extends Base_Controller {
 		));
 		return Redirect::to_route('admins')
 			->with('message', 'Pub tillagd');
+	}
+
+	public function get_edit()
+	{
+		$pubs = Pub::all();		
+		return View::make('admins.edit')
+				->with('pubs', $pubs);	
 	}				
 }
