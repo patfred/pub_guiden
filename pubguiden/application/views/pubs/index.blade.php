@@ -5,7 +5,7 @@
 
 	<ul>
 		<li> {{ $pub->description }} </li>
-		<li>Adress: {{ $pub->address}}</li>
+		<li>Adress: {{ $pub->address }}</li>
 		<li>Billigaste öl: {{ $pub->lowest_price }} kr</li>
 		<li>Quiz? 
 			@if($pub->quiz == 0)
