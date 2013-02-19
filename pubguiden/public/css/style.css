@@ -1,5 +1,5 @@
 @import url('font-awesome.min.css');
-@import url('museo-300.css');
+@import url('museo_slab.css');
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 
 /*-----------------------
@@ -7,8 +7,7 @@
 ------------------------*/
 
 body, div, dl, dt, input, li, p, ul, button{
-	font-family: 'museo_slab300', serif;
-	font-weight: 300;
+	font-family: 'museo_slab', serif;
 	line-height: normal;
 }
 h1,h2,h3,h4,h5{
@@ -184,7 +183,18 @@ ul{
 	margin-bottom: 10px;
 }
 
-.login-signup input[type="text"], .login-signup input[type="password"]{
+.error, .notification{
+	color: #800000;
+	font-size: 12px;
+} 
+.error i, .notification i{
+	margin-right:10px;
+}
+.login-signup span label{
+	font-weight: bold;
+}
+.login-signup input[type="text"], 
+.login-signup input[type="password"]{
 	height:35px;
 }
 

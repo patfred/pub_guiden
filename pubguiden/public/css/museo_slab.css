@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'museo_slab';
+    src: url('../font/museo_slab_300-webfont-webfont.eot');
+    src: url('../font/museo_slab_300-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museo_slab_300-webfont-webfont.woff') format('woff'),
+         url('../font/museo_slab_300-webfont-webfont.ttf') format('truetype'),
+         url('../font/museo_slab_300-webfont-webfont.svg#museo_slab300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'museo_slab';
+    src: url('../font/museo_slab_500-webfont.eot');
+    src: url('../font/museo_slab_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museo_slab_500-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
