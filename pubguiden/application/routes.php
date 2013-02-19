@@ -48,8 +48,9 @@ Route::post('search/index', array('before'=>'csrf', 'uses'=>'search@index'));
 Route::post('search/ooops', array('before'=>'csrf', 'uses'=>'search@ooops'));
 
 ///////// This Routs belongs to ADMIN /////////
-Route::get('admins', 'admins@index');
-Route::get('admins/crud', array('as'=>'crud_admin','uses'=>'admins@crud'));
+Route::get('admins', array('as'=>'admins', 'uses'=>'admins@index'));
+Route::get('admins/crud', array('as'=>'crud_admins','uses'=>'admins@crud'));
+Route::post('admins/create', array('uses'=>'admins@create'));
 
 
 /*
