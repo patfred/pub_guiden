@@ -31,18 +31,25 @@
 |
 */
 Route::controller('home');
+
+///////// This Routs belongs to RATINGS /////////
 Route::controller('ratings');
 
-// Route::get('pubs', array('as'=>'pubs', 'uses'=>'pubs@index'));
+///////// This Routs belongs to PUBS /////////
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
-
 Route::get('list_pubs/top20',array('as'=>'list_pubs','uses'=>'list_pubs@top20'));
 Route::get('list_pubs/nearestPubs',array('as'=>'list_pubs','uses'=>'list_pubs@nearestPubs'));
 
+///////// This Routs belongs to CATEGORIES /////////
 Route::get('categories/index', 'home@categories');
 
-Route::post('search/index', array('before' => 'csrf', 'uses'=>'search@index'));
-Route::post('search/ooops', array('before' => 'csrf', 'uses'=>'search@ooops'));
+///////// This Routs belongs to SEARCH /////////
+Route::post('search/index', array('before'=>'csrf', 'uses'=>'search@index'));
+Route::post('search/ooops', array('before'=>'csrf', 'uses'=>'search@ooops'));
+
+///////// This Routs belongs to ADMIN /////////
+Route::get('admins', 'admins@index');
+Route::get('admins/crud', array('as'=>'crud_admin','uses'=>'admins@crud'));
 
 
 /*

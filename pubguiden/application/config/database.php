@@ -64,7 +64,7 @@ return array(
 
 		'mysql' => array(
 			'driver'   => 'mysql',
-			'host'     => 'localhost:8889',
+			'host'     => 'localhost',
 			'database' => 'pubguiden',
 			'username' => 'root',
 			'password' => 'root', //Update this to your local pw
