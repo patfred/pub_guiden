@@ -47,8 +47,8 @@
 	@endif
 
 	<div>
-	@foreach
-
+		@foreach()
+		@endforeach
 	</div>
 
 </section>
