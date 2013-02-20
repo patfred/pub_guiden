@@ -9,9 +9,9 @@ class Admins_Controller extends Base_Controller {
 		return View::make('admins.index');
 	}
 
-	public function get_crud()
+	public function get_create()
 	{	
-		return View::make('admins.crud')
+		return View::make('admins.create')
 			->with('title', 'add new pub');
 	}
 
@@ -28,4 +28,19 @@ class Admins_Controller extends Base_Controller {
 		return Redirect::to_route('admins')
 			->with('message', 'Pub tillagd');
 	}
+
+	public function get_edit()
+	{
+		$pubs = Pub::all();		
+		return View::make('admins.edit')
+				->with('pubs', $pubs);	
+	}
+
+	public function get_update($id){
+
+		$pub = Pub::find($id);
+		return View::make('admins.update')
+			->with('title', 'Detta är en pub')
+			->with('pub', $pub);
+	}				
 }
