@@ -8,7 +8,7 @@ class Ratings_Controller extends Base_Controller {
 		$this->filter('before', 'auth');
 		$pubs = Pub::where('id', '=', $id)->get();
 		return View::make('ratings.index')
-		->with('pubs', $pubs);
+			->with('pubs', $pubs);
 		
 	}
 }

@@ -4,7 +4,7 @@
 	<section class="content container">
 			<h1>Editing {{ $pub->name }}</h1>
 
-		{{ Form::open('admins/edit_pub', 'PUT') }}
+		{{ Form::open('admins/edit_insert', 'PUT') }}
 
 			{{ Form::label('name', 'Namn:') }}
 			{{ Form::text('name', $pub->name) }}
