@@ -30,7 +30,8 @@
 	  		{{ HTML::link('/login', 'Logga in för att sätta betyg.') }} 
 	 	@endif
 	</div>
-
+	
+	<!-- Show comment form if user is logged in -->	
 	@if (isset(Auth::user()->id))
 	
 	<div class="comments">
@@ -44,11 +45,12 @@
 	    
 	    {{ Form::close() }}
 	</div>	
+	@else
+		<p> Du måste vara inloggad för att kunna kommentera </p>	
 	@endif
 
 	<div>
-		@foreach()
-		@endforeach
+		<!-- Place foreach comments, when done -->
 	</div>
 
 </section>

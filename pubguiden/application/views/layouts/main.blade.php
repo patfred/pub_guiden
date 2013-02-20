@@ -3,13 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Pubguiden</title>
-        <?php echo HTML::script('js/modernizr.js');?>  
-        <?php echo HTML::style('css/bootstrap.min.css'); ?>
-        <?php echo HTML::style('css/bootstrap-responsive.css'); ?>
-        <?php echo HTML::style('css/style.css'); ?>
-        <?php echo HTML::style('css/jquery.rating.css'); ?>
-        <!-- {{ Asset::styles() }}
-        {{ Asset::scripts() }} -->
+        {{ HTML::script('js/modernizr.js') }}
+        {{ HTML::style('css/bootstrap.min.css') }}
+        {{ HTML::style('css/bootstrap-responsive.css') }}
+        {{ HTML::style('css/style.css') }}
+        {{ HTML::style('css/jquery.rating.css') }}
     </head>
     <body>
 
@@ -35,7 +33,7 @@
                 
                 <div id="show-login" class="show-hide"> 
                     @if ( Auth::check())
-                        <div class="user-email"> Inloggad som: {{ Auth::user()->email }} </div>
+                        <div class="user-email"> Inloggad som: {{ Auth::user()->username }} </div>
                         <div class="user-buttons"> <i class="icon-heart-empty"></i>{{ HTML::link(Config::get('myauth::config.bundle_route') . '/dashboard', 'Min sida') }} </div>
                         <div class="user-buttons"> <i class="icon-signout"></i>{{ HTML::link(Config::get('myauth::config.bundle_route') . '/' . Config::get('myauth::config.logout_route'), 'Logga ut') }} </div>
 
@@ -56,11 +54,11 @@
             <p> &copy; Pubguiden 2013</p>
         </footer>
 
-    <?php echo HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');?> 
-    <?php echo HTML::script('js/bootstrap.min.js');?>   
-    <?php echo HTML::script('js/app.js');?> 
-    <?php echo HTML::script('js/jquery.rating.js');?>  
-    <?php echo HTML::script('js/geolocation.js');?>  
+    {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js') }}
+    {{ HTML::script('js/bootstrap.min.js') }}
+    {{ HTML::script('js/app.js') }}
+    {{ HTML::script('js/jquery.rating.js') }}
+    {{ HTML::script('js/geolocation.js') }}  
 
     </body>
 </html>
