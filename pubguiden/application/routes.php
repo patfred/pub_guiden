@@ -53,6 +53,7 @@ Route::get('admins/create', array('as'=>'create_pub','uses'=>'admins@create'));
 Route::post('admins/create', array('uses'=>'admins@create'));
 // Update //
 Route::get('admins/edit', array('as'=>'edit_pub','uses'=>'admins@edit'));
+Route::get('admins/update(:any)', array('as'=>'update_pub','uses'=>'admins@update'));
 
 
 

@@ -4,7 +4,7 @@
 	<section class="content container">
 
 		@foreach($pubs as $pub)
-			<li> {{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }} </li>
+			<li> {{ HTML::link_to_action("admins@update", $pub->name, array($pub->id)) }} </li>
 		@endforeach
 
 	</section>

@@ -34,5 +34,13 @@ class Admins_Controller extends Base_Controller {
 		$pubs = Pub::all();		
 		return View::make('admins.edit')
 				->with('pubs', $pubs);	
+	}
+
+	public function get_update($id){
+
+		$pub = Pub::find($id);
+		return View::make('admins.update')
+			->with('title', 'Detta är en pub')
+			->with('pub', $pub);
 	}				
 }
