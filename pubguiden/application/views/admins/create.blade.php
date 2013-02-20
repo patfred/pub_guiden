@@ -6,7 +6,7 @@
 		{{ Form::open('admins/create', 'POST') }}
 
 			{{ Form::label('name', 'Namn:') }}
-			{{ Form::text('name') }}
+			{{ Form::text('name', Input::old('name')) }}
 
 			{{ Form::label('description', 'Beskrivning:') }}
 			{{ Form::text('description') }}

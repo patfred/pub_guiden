@@ -53,8 +53,7 @@ Route::get('admins/create', array('as'=>'create_pub','uses'=>'admins@create'));
 Route::post('admins/create', array('uses'=>'admins@create'));
 // Update //
 Route::get('admins/edit', array('as'=>'edit_pub','uses'=>'admins@edit'));
-Route::get('admins/update(:any)', array('as'=>'update_pub','uses'=>'admins@update'));
-
+Route::get('admins/update/(:any)', array('as'=>'update_pub','uses'=>'admins@update'));
 
 
 /*
@@ -109,6 +108,32 @@ Event::listen('500', function()
 |		}));
 |
 */
+
+// Validation for new Pub //
+Route::post('admins/create', array('before' => 'csrf', function()
+{
+    $rules = array(
+        'name' => array('required'),
+        'description' => array('required'),
+        'quiz' => array('required'),
+        'after_work' => array('required'),
+        'lowest_price' => array('required'),
+        'address' => array('required')
+    );
+
+    $validation = Validator::make(Input::all(), $rules);
+
+    if ($validation->fails())
+    {
+        // Validation has failed.
+        return Redirect::to('admins')->with_input()->with_errors($validation);
+    }
+
+    // Validation has succeeded. Create new pub.
+}));
+
+
+
 
 Route::filter('before', function()
 {

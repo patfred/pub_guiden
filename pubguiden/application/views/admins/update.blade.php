@@ -5,7 +5,7 @@
 
 	<h1>Editing {{ $pub->name }}</h1>
 
-		{{ Form::open('admins/create', 'POST') }}
+		{{ Form::open('admins/update', 'PUT') }}
 
 			{{ Form::label('name', 'Namn:') }}
 			{{ Form::text('name', $pub->name) }}
