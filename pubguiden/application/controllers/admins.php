@@ -17,16 +17,22 @@ class Admins_Controller extends Base_Controller {
 
 	public function post_create()
 	{	
-		Pub::create(array(
-			'name'=>Input::get('name'),
-			'description'=>Input::get('description'),
-			'quiz'=>Input::get('quiz'),
-			'after_work'=>Input::get('after_work'),
-			'lowest_price'=>Input::get('lowest_price'),
-			'address'=>Input::get('address')
-		));
-		return Redirect::to_route('admins')
-			->with('message', 'Pub tillagd');
+		$validation = Pub::validate(Input::all());
+
+		if( $validation->fails() ){
+			return Redirect::to_route('create_pub')->with_errors($validation)->with_input();
+		} else {
+			Pub::create(array(
+				'name'=>Input::get('name'),
+				'description'=>Input::get('description'),
+				'quiz'=>Input::get('quiz'),
+				'after_work'=>Input::get('after_work'),
+				'lowest_price'=>Input::get('lowest_price'),
+				'address'=>Input::get('address')
+			));
+			return Redirect::to_route('admins')
+				->with('message', 'Pub tillagd');
+		}
 	}
 
 	public function get_edit()

@@ -53,8 +53,6 @@ Route::get('admins/create', array('as'=>'create_pub','uses'=>'admins@create'));
 Route::post('admins/create', array('uses'=>'admins@create'));
 // Update //
 Route::get('admins/edit', array('as'=>'edit_pub','uses'=>'admins@edit'));
-Route::put('admins/edit_pub/(:any)', array('uses'=>'admins@edit_pub'));
-
 
 
 /*
@@ -109,7 +107,6 @@ Event::listen('500', function()
 |		}));
 |
 */
-
 Route::filter('before', function()
 {
 	// Do stuff before every request to your application...
