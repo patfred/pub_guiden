@@ -36,11 +36,8 @@ class Admins_Controller extends Base_Controller {
 				->with('pubs', $pubs);	
 	}
 
-	public function get_update($id){
+	public function put_edit_pub()
+	{
 
-		$pub = Pub::find($id);
-		return View::make('admins.update')
-			->with('title', 'Detta är en pub')
-			->with('pub', $pub);
-	}				
+	}
 }
