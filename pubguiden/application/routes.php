@@ -54,8 +54,7 @@ Route::post('admins/create', array('uses'=>'admins@create'));
 
 //Update//
 Route::get('admins/edit', array('as'=>'edit_pub','uses'=>'admins@edit'));
-Route::get('admins/edit/(:any)', array('uses'=>'admins@edit_pub'));
-
+Route::get('admins/edit/(:any)', array('as'=>'edit','uses'=>'admins@edit_pub'));
 Route::put('admins/update', array('uses'=>'admins@update'));
 
 

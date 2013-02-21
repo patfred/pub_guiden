@@ -31,7 +31,7 @@ class Admins_Controller extends Base_Controller {
 				'address'=>Input::get('address')
 			));
 			return Redirect::to_route('admins')
-				->with('message', 'Pub tillagd');
+				->with('message', 'Pub tillagd'); // Gör dynamisk så den säger $pubNamn tillagd bla bla
 		}
 	}
 
@@ -54,7 +54,7 @@ class Admins_Controller extends Base_Controller {
 		$validation = Pub::validate(Input::all());
 
 		if( $validation->fails() ){
-			return Redirect::to_route('edit_pub', $id)->with_errors($validation)->with_input();
+			return Redirect::to_route('edit', $id)->with_errors($validation)->with_input();
 		} else {
 			Pub::update($id, array(
 				'name'=>Input::get('name'),
@@ -64,8 +64,8 @@ class Admins_Controller extends Base_Controller {
 				'lowest_price'=>Input::get('lowest_price'),
 				'address'=>Input::get('address')
 			));
-			return Redirect::to_route('admins')
-				->with('message', 'Pub tillagd');
+			return Redirect::to_route('edit_pub', $id)
+				->with('message', 'puben har uppdaterats'); // Gör dynamisk
 		}
 	}
 
