@@ -31,33 +31,32 @@ class Admins_Controller extends Base_Controller {
 				'address'=>Input::get('address')
 			));
 			return Redirect::to_route('admins')
-				->with('message', 'Pub tillagd');
+				->with('message', 'Pub tillagd'); // Gör dynamisk så den säger $pubNamn tillagd bla bla
 		}
 	}
 
 	public function get_edit()
-	{
-		$pubs = Pub::all();		
+	{		
 		return View::make('admins.edit')
-				->with('pubs', $pubs);
+				->with('pubs', Pub::all());
 	}
 
 	public function get_edit_pub($id)
 	{
-		$pub = Pub::find($id);
 		return View::make('admins.edit_pub')
 			->with('title', 'Redigera en pub')
-			->with('pub', $pub);
+			->with('pub', Pub::find($id));
 	}
 
-	public function put_edit_insert()
-	{	
+	public function put_update()
+	{
+		$id = Input::get('id');
 		$validation = Pub::validate(Input::all());
 
 		if( $validation->fails() ){
-			return Redirect::to_route('admins.edit_pub')->with_errors($validation)->with_input();
+			return Redirect::to_route('edit', $id)->with_errors($validation)->with_input();
 		} else {
-			Pub::update(array(
+			Pub::update($id, array(
 				'name'=>Input::get('name'),
 				'description'=>Input::get('description'),
 				'quiz'=>Input::get('quiz'),
@@ -65,12 +64,9 @@ class Admins_Controller extends Base_Controller {
 				'lowest_price'=>Input::get('lowest_price'),
 				'address'=>Input::get('address')
 			));
-			return Redirect::to_route('admins.edit')
-				->with('message', 'Pub tillagd');
+			return Redirect::to_route('edit_pub', $id)
+				->with('message', 'puben har uppdaterats'); // Gör dynamisk
 		}
 	}
-
-
-
 
 }

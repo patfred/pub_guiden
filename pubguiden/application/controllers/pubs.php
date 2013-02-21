@@ -2,7 +2,7 @@
 
 class Pubs_Controller extends Base_Controller {
 	public $restful = true;
-	
+
 	public function get_index($id){
 
 		$pub = Pub::find($id);
@@ -25,18 +25,16 @@ class Pubs_Controller extends Base_Controller {
 		if ($validation->fails()){
 			return Redirect::back()->with('message', 'Något gick fel, försök igen!');
 		}
-		
+
 		$user_comment =array(
 				'pub_id' => Input::get('pub_id'), 
 				'user_id' => Input::get('user_id'), 
-				'comment' => e(Input::get('comment'))
-			);
-		
-		$comment = new Comment($user_comment);
-	    
-	    $comment->save();
+				'comment' => e(Input::get('comment')
+		));
 
+		$comment = new Comment($user_comment);
+	    $comment->save();
 	    	return Redirect::back()
-			->with('message', 'Kommentar tillagd');
+				->with('message', 'Kommentar tillagd');
 	}		
 }

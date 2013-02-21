@@ -22,7 +22,7 @@
 		    @endif
 		</li>
 	</ul>
-	
+
 	<div class="rate-button">
 		@if (isset(Auth::user()->id))
 			{{ HTML::link_to_action("ratings@index", 'Sätt betyg', array($pub->id)) }}
@@ -30,10 +30,10 @@
 	  		{{ HTML::link('/login', 'Logga in för att sätta betyg.') }} 
 	 	@endif
 	</div>
-	
+
 	<!-- Show comment form if user is logged in -->	
 	@if (isset(Auth::user()->id))
-	
+
 	<div class="comment-form">
 	<h3>Kommentera</h3>
 		{{ Form::open()	}}	
@@ -44,7 +44,7 @@
 	     	{{ Form::textarea('comment','', array('class'=>'comment-text')) }} 
 
 	     	{{ Form::submit('Posta kommentar') }}
-	    
+
 	    {{ Form::close() }}
 	</div>	
 	@else
