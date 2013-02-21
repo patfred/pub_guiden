@@ -34,23 +34,36 @@
 	<!-- Show comment form if user is logged in -->	
 	@if (isset(Auth::user()->id))
 	
-	<div class="comments">
+	<div class="comment-form">
+	<h3>Kommentera</h3>
 		{{ Form::open()	}}	
-	    	
+	    	{{ Form::token() }}
+
 	    	{{ Form::hidden('pub_id', $pub->id) }}
 	    	{{ Form::hidden('user_id', Auth::user()->id) }}
-	     	{{ Form::textarea('comment') }} 
+	     	{{ Form::textarea('comment','', array('class'=>'comment-text')) }} 
 
 	     	{{ Form::submit('Posta kommentar') }}
 	    
 	    {{ Form::close() }}
 	</div>	
 	@else
+		<h3>Kommentera</h3>
 		<p> Du måste vara inloggad för att kunna kommentera </p>	
 	@endif
+	@if (Session::has('message'))
+        <p class=""> <i class='icon-ok-circle'></i>{{ Session::get('message') }}</p>
+    @endif
 
-	<div>
-		<!-- Place foreach comments, when done -->
+	<div class="comments">	
+	<h3>Kommentarer</h3>
+		@foreach ($comments as $comment)
+		<div class="comment">
+	    	<h4> {{ $comment->user->username }}</h4> 
+	    	<span class="comment-date"> <i class="icon-time"></i> {{ $comment->created_at }} </span>
+	    	<p><i class="icon-comment-alt"></i>{{ e($comment->comment) }}</p>
+	    </div>	
+	    @endforeach
 	</div>
 
 </section>

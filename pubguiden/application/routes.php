@@ -37,6 +37,7 @@ Route::controller('ratings');
 
 ///////// This Routs belongs to PUBS /////////
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
+Route::post('pub/(:all)',array('before'=>'csrf','uses'=>'pubs@comment'));
 Route::get('list_pubs/top20',array('as'=>'list_pubs','uses'=>'list_pubs@top20'));
 Route::get('list_pubs/nearestPubs',array('as'=>'list_pubs','uses'=>'list_pubs@nearestPubs'));
 

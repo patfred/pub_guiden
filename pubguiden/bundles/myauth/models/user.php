@@ -8,12 +8,12 @@
 
 class User extends Eloquent {
 	
-	public function comment()
+	public function comments()
 	{
 		return $this->has_many('Comment');
 	}	
 
-	public function rating()
+	public function ratings()
 	{
 		return $this->has_many('Rating');
 	}
