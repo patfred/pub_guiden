@@ -5,9 +5,8 @@ class Pubs_Controller extends Base_Controller {
 	
 	public function get_index($id){
 
-		$pub = Pub::find($id);
 		return View::make('pubs.index')
 			->with('title', 'Detta är en pub')
-			->with('pub', $pub);
+			->with('pub', Pub::find($id));
 	}
 }
