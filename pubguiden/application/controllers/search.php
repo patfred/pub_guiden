@@ -5,22 +5,19 @@ class Search_Controller extends Base_Controller {
 	public $restful = true;
 
 	public function post_index(){
-		if(Input::get('search_string') != '') {
-			$search_string = Input::get('search_string');
-			$results = Pub::where('name', 'LIKE', '%'.$search_string.'%')->get();
-			
-			if($results) {
-				return View::make('search.index')
-					->with('title', 'Sökresultat')
-					->with('search_string', $search_string)
-					->with('results', $results);
-			}
-			else {
-				return View::make('search/ooops');
-			}
-		}		
-		else {
-			return View::make('search/ooops');			
+		$search_string = Input::get('search_string');
+		if ($search_string == 'quiz') {			
+			$results = Pub::where('quiz', '=', 1)->get();			
 		}
-	}	
+		else if ($search_string == 'after work') {
+			$results = 	Pub::where('after_work', '=', 1)->get();	
+		}
+		else {
+			$results = Pub::where('name', 'LIKE', '%'.$search_string.'%')->get();
+		}
+		return View::make('search.index')
+		->with('title', 'Sökresultat')
+		->with('search_string', $search_string)
+		->with('results', $results);
+	}
 }

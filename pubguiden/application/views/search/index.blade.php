@@ -1,17 +1,16 @@
 @layout('layouts/main')
 @section('content')
 	<section class='content container search-result'>
-
-	  @if (Session::has('notification'))
-        <span class="notification">{{ Session::get('notification') }}</span>
-    @endif
-    	<h2>Sökresultat</h2>
+   	<h2>Sökresultat</h2>
+   	@if($search_string != '' && $results)
 		<p>Du sökte på "{{ $search_string }}"</p>
-		<ul>
-		
+		<ul>		
 		@foreach($results as $result) 
 			<li>{{ HTML::link_to_action("pubs@index", $result->name, array($result->id)) }} </li>
 		@endforeach
-	</ul>
+	</ul>	
+	@else
+	<p>Din sökning gav inga resultat. Försök igen!</p>
+	@endif
 	</section>
 @endsection

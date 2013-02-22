@@ -32,25 +32,24 @@
 */
 Route::controller('home');
 
-///////// This Routs belongs to RATINGS /////////
+///////// These Routes belongs to RATINGS /////////
 Route::group(array('before' => 'auth'), function()
 {
 	Route::controller('ratings');
 });
-///////// This Routs belongs to PUBS /////////
+///////// These Routes belongs to PUBS /////////
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
 Route::post('pub/(:all)',array('before'=>'csrf','uses'=>'pubs@comment'));
 Route::get('list_pubs/top20',array('as'=>'list_pubs','uses'=>'list_pubs@top20'));
 Route::get('list_pubs/nearestPubs',array('as'=>'list_pubs','uses'=>'list_pubs@nearestPubs'));
 
-///////// This Routs belongs to CATEGORIES /////////
+///////// These Routes belongs to CATEGORIES /////////
 Route::get('categories/index', 'home@categories');
 
-///////// This Routs belongs to SEARCH /////////
+///////// These Routes belongs to SEARCH /////////
 Route::post('search/index', array('before'=>'csrf', 'uses'=>'search@index'));
-Route::post('search/ooops', array('before'=>'csrf', 'uses'=>'search@ooops'));
 
-///////// This Routs belongs to ADMIN /////////
+///////// These Routes belongs to ADMIN /////////
 Route::get('admins', array('as'=>'admins', 'uses'=>'admins@index'));
 Route::get('admins/create', array('as'=>'create_pub','uses'=>'admins@create'));
 Route::post('admins/create', array('uses'=>'admins@create'));

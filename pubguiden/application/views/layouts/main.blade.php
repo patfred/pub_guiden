@@ -25,7 +25,7 @@
                 <div id="show-search" class="show-hide"> 
                     {{ Form::open('search/index', 'POST', array('id' => 'search', 'class'=>'search_form')) }}
                     {{ Form::token() }}
-                    {{ Form::text('search_string','', array('id'=> 'search_string', 'class' => 'search_string', 'placeholder'=>'Sök...')) }}
+                    {{ Form::text('search_string','', array('id'=> 'search_string', 'class' => 'search_string', 'placeholder'=>'Sök på pubnamn, "after work" eller "quiz"')) }}
                     {{ Form::submit('sök') }}
                     {{ Form::close() }}
                     <!-- <a href="#"><i class="icon-search icon-large"></i> </a> -->
