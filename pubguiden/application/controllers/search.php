@@ -13,7 +13,7 @@ class Search_Controller extends Base_Controller {
 			$results = 	Pub::where('after_work', '=', 1)->get();	
 		}
 		else {
-			$results = Pub::where('name', 'LIKE', '%'.$search_string.'%')->get();
+			$results = Pub::where('name', 'LIKE', '%'.$search_string.'%')->or_where('description', 'LIKE', '%'.$search_string.'%')->get();
 		}
 		return View::make('search.index')
 		->with('title', 'Sökresultat')
