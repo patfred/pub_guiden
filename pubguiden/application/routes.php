@@ -32,11 +32,13 @@
 */
 Route::controller('home');
 
-///////// These Routes belongs to RATINGS /////////
-Route::group(array('before' => 'auth'), function()
-{
-	Route::controller('ratings');
-});
+///////// This Routes belongs to RATINGS /////////
+ Route::group(array('before' => 'auth'), function()
+ {
+	Route::get('ratings/(:any)',array('as'=>'rating','uses'=>'ratings@index'));
+	Route::post('ratings/(:all)',array('before'=>'csrf','uses'=>'ratings@ratings'));
+ });
+
 ///////// These Routes belongs to PUBS /////////
 Route::get('pub/(:any)',array('as'=>'pub','uses'=>'pubs@index'));
 Route::post('pub/(:all)',array('before'=>'csrf','uses'=>'pubs@comment'));
