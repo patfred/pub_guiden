@@ -2,26 +2,34 @@
 @section('content')
 <section class="content container">
 	<h2> {{ $pub->name }} </h2>
-
-	<ul>
-		<li> {{ $pub->description }} </li>
-		<li>Adress: {{ $pub->address }}</li>
-		<li>Billigaste öl: {{ $pub->lowest_price }} kr</li>
-		<li>Quiz? 
+	
+	<div class="big-rating"> {{ $ratings }} </div>
+	<section class="pub-info">
+		<div class="pub-text"> {{ $pub->description }} </div>
+			
+		<div class="pub-text"><strong>Adress:</strong> {{ $pub->address }}</div>
+			
+		<div class="pub-text"><strong>Billigaste öl:</strong> {{ $pub->lowest_price }} kr</div>
+		<div class="pub-text"><strong>Quiz?</strong> 
 			@if($pub->quiz == 0)
 		    	Nej
 		    @else
 		    	Ja
 		    @endif
-		</li>
-		<li>After Work? 
+		</div>
+		<div class="pub-text"> <strong> After Work? </strong>
 			@if($pub->after_work == 0)
 		    	Nej
 		    @else
 		    	Ja
 		    @endif
-		</li>
-	</ul>
+		</div>
+		<div class="category-rating"> <div class="cat-name">  Service </div> <div class="small-rating"> {{ $service }} </div> </div>
+		<div class="category-rating"> <div class="cat-name">  Mat </div> <div class="small-rating"> {{ $food }} </div> </div>
+		<div class="category-rating"> <div class="cat-name">  Atmosfär </div> <div class="small-rating"> {{ $atmosphere }} </div> </div>
+		<div class="category-rating"> <div class="cat-name">  Lokal </div> <div class="small-rating"> {{ $place }} </div> </div>
+		<div class="category-rating"> <div class="cat-name">  Utbud </div> <div class="small-rating"> {{ $assortments }} </div> </div>
+	</section>	
 
 	<div class="rate-button">
 		@if (isset(Auth::user()->id))

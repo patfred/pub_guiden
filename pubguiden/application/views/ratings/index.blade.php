@@ -2,15 +2,13 @@
 @section('content')
 <section class='content container ratings'>
 @foreach($pubs as $pub)
-<h2>Sätt betyg på {{$pub->name}}</h2>
-
-
-
-
-
-{{ Form::open('my/route') }}
+	<h2>Sätt betyg på {{$pub->name}}</h2>
+@endforeach
+{{ Form::open() }}
 	
-	
+	{{ Form::token() }}
+		{{ Form::hidden('pub_id', $pub->id) }}
+		{{ Form::hidden('user_id', Auth::user()->id) }}
 	<p>Service</p>
 	<div class="pub-rating">
 		{{ Form::radio('service', '1', '', array('class'=>'star')) }}
@@ -50,16 +48,19 @@
 
 	<p>Utbud</p>
 	<div class="pub-rating">
-		{{ Form::radio('range', '1', '', array('class'=>'star')) }}
-		{{ Form::radio('range', '2', '', array('class'=>'star')) }}
-		{{ Form::radio('range', '3', '', array('class'=>'star')) }}
-		{{ Form::radio('range', '4', '', array('class'=>'star')) }}
-		{{ Form::radio('range', '5', '', array('class'=>'star')) }}
+		{{ Form::radio('assortments', '1', '', array('class'=>'star')) }}
+		{{ Form::radio('assortments', '2', '', array('class'=>'star')) }}
+		{{ Form::radio('assortments', '3', '', array('class'=>'star')) }}
+		{{ Form::radio('assortments', '4', '', array('class'=>'star')) }}
+		{{ Form::radio('assortments', '5', '', array('class'=>'star')) }}
 	</div>
 
 
 	{{ Form::submit('Skicka') }}
 	{{ Form::close() }}
-	@endforeach
+
+	@if (Session::has('message'))
+        <p class=""> <i class='icon-ok-circle'></i>{{ Session::get('message') }}</p>
+    @endif
 </section>
 @endsection

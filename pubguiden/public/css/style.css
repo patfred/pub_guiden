@@ -127,6 +127,10 @@ input{
 	text-align: center;
 }
 
+.pub-info .pub-text{
+	margin: 10px 0;
+}
+
 /*-----------------------
 	Rating
 ------------------------*/
@@ -142,6 +146,31 @@ input{
 	display: block;
 }
 
+.big-rating{
+	width: 59px;
+	background: url('../img/rating-star.png') no-repeat;
+	padding: 30px 0 18px 0;
+	text-align: center;
+	font-size: 16px;
+}
+
+.small-rating{
+	background: url('../img/rating-star.png') no-repeat 0px -69px;
+	width: 41px;
+	padding: 15px 0;
+	text-align: center;
+	display:inline-block;
+}
+
+.category-rating{
+	margin: 10px 0;
+}
+
+.category-rating .cat-name{
+	display: inline-block;
+	font-weight: bold;
+	width: 100px;
+}
 /*-----------------------
 	Buttons - Login, rating, comment
 ------------------------*/
