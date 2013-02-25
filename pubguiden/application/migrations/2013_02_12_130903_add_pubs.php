@@ -18,7 +18,10 @@ class Add_Pubs {
             'lowest_price' => '35',
             'address' => 'The pubgatan 4',
             'created_at'=>date('Y-m-d H:m:s'),
-            'updated_at'=>date('Y-m-d H:m:s')
+            'updated_at'=>date('Y-m-d H:m:s'),
+           'latitude'=> 57.698441,
+            'longitude'=>11.966791
+
         	)
     	);
 
@@ -31,7 +34,9 @@ class Add_Pubs {
             'lowest_price' => '25',
             'address' => 'The pubgatan 8',
             'created_at'=>date('Y-m-d H:m:s'),
-            'updated_at'=>date('Y-m-d H:m:s')
+            'updated_at'=>date('Y-m-d H:m:s'),
+         'latitude'=> 57.698965,
+            'longitude'=>11.945994
         	)
     	);
 
@@ -44,7 +49,9 @@ class Add_Pubs {
             'lowest_price' => '55',
             'address' => 'The pubgatan 1',
             'created_at'=>date('Y-m-d H:m:s'),
-            'updated_at'=>date('Y-m-d H:m:s')
+            'updated_at'=>date('Y-m-d H:m:s'),
+           'latitude'=>57.699515,
+            'longitude'=>11.953032
         	)
     	);
 
@@ -57,7 +64,9 @@ class Add_Pubs {
             'lowest_price' => '41',
             'address' => 'The pubgatan 11',
             'created_at'=>date('Y-m-d H:m:s'),
-            'updated_at'=>date('Y-m-d H:m:s')
+            'updated_at'=>date('Y-m-d H:m:s'),
+           'latitude'=>57.698965,
+            'longitude'=>11.945994
         	)
     	);
 
@@ -70,7 +79,9 @@ class Add_Pubs {
             'lowest_price' => '11',
             'address' => 'The pubgatan 13',
             'created_at'=>date('Y-m-d H:m:s'),
-            'updated_at'=>date('Y-m-d H:m:s')
+            'updated_at'=>date('Y-m-d H:m:s'),
+           'latitude'=>57.698965,
+            'longitude'=>11.945994
         	)
     	);
 	}

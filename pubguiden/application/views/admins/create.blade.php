@@ -26,6 +26,14 @@
 			{{ Form::text('address'), Input::old('address') }}
 			{{ $errors->first('address', '<p>:message</p>' ) }}
 
+			{{ Form::label('latitude', 'Latitud:') }}
+			{{ Form::text('latitude'), Input::old('latitude') }}
+			{{ $errors->first('latitude', '<p>:message</p>' ) }}
+
+			{{ Form::label('longitude', 'Longitud:') }}
+			{{ Form::text('longitude'), Input::old('longitude') }}
+			{{ $errors->first('longitude', '<p>:message</p>' ) }}
+
 			<p>{{ Form::submit('Lägg in ny pub') }}</p>
 
 		{{ Form::token() . Form::close() }}

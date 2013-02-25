@@ -28,6 +28,15 @@
 			{{ Form::text('address', $pub->address) }}
 			{{ $errors->first('address', '<p>:message</p>' ) }}
 
+			{{ Form::label('latitude', 'Latitud:') }}
+			{{ Form::text('latitude', $pub->latitude) }}
+			{{ $errors->first('latitude', '<p>:message</p>' ) }}
+
+
+			{{ Form::label('longitude', 'Longitud:') }}
+			{{ Form::text('longitude', $pub->longitude) }}
+			{{ $errors->first('longitude', '<p>:message</p>' ) }}
+
 			{{ Form::hidden('id', $pub->id) }}
 
 			<p>{{ Form::submit('Uppdatera pub') }}</p>

@@ -19,6 +19,8 @@ class Create_Pubs_Table {
             $table->integer("lowest_price");
             $table->string("address", 45);
             $table->timestamps();
+            $table->decimal("latitude", 8, 6);
+            $table->decimal("longitude", 8, 6);
         });
 	}
 

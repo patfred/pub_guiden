@@ -15,5 +15,4 @@ class List_Pubs_Controller extends Base_Controller {
 		return View::make('list_pubs.nearestPubs')
 				->with('pubs', Pub::all());	
 	}
-
 }

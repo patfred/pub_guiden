@@ -28,7 +28,9 @@ class Admins_Controller extends Base_Controller {
 				'quiz'=>Input::get('quiz'),
 				'after_work'=>Input::get('after_work'),
 				'lowest_price'=>Input::get('lowest_price'),
-				'address'=>Input::get('address')
+				'address'=>Input::get('address'),
+				'longitude'=>Input::get('longitude'),
+				'latitude'=>Input::get('latitude')
 			));
 			return Redirect::to_route('admins')
 				->with('message', 'Pub tillagd'); // Gör dynamisk så den säger $pubNamn tillagd bla bla
@@ -62,7 +64,9 @@ class Admins_Controller extends Base_Controller {
 				'quiz'=>Input::get('quiz'),
 				'after_work'=>Input::get('after_work'),
 				'lowest_price'=>Input::get('lowest_price'),
-				'address'=>Input::get('address')
+				'address'=>Input::get('address'),
+				'longitude'=>Input::get('longitude'),
+				'latitude'=>Input::get('latitude')
 			));
 			return Redirect::to_route('edit_pub', $id)
 				->with('message', 'puben har uppdaterats'); // Gör dynamisk
