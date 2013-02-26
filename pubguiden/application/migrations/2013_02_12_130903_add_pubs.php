@@ -19,7 +19,7 @@ class Add_Pubs {
             'address' => 'The pubgatan 4',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s'),
-           'latitude'=> 57.698441,
+            'latitude'=> 57.698441,
             'longitude'=>11.966791
 
         	)
@@ -35,7 +35,7 @@ class Add_Pubs {
             'address' => 'The pubgatan 8',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s'),
-         'latitude'=> 57.698965,
+            'latitude'=> 57.698965,
             'longitude'=>11.945994
         	)
     	);
@@ -50,7 +50,7 @@ class Add_Pubs {
             'address' => 'The pubgatan 1',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s'),
-           'latitude'=>57.699515,
+            'latitude'=>57.699515,
             'longitude'=>11.953032
         	)
     	);
@@ -65,7 +65,7 @@ class Add_Pubs {
             'address' => 'The pubgatan 11',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s'),
-           'latitude'=>57.698965,
+            'latitude'=>57.698965,
             'longitude'=>11.945994
         	)
     	);
@@ -80,7 +80,7 @@ class Add_Pubs {
             'address' => 'The pubgatan 13',
             'created_at'=>date('Y-m-d H:m:s'),
             'updated_at'=>date('Y-m-d H:m:s'),
-           'latitude'=>57.698965,
+            'latitude'=>57.698965,
             'longitude'=>11.945994
         	)
     	);
