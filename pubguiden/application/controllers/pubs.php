@@ -37,7 +37,8 @@ class Pubs_Controller extends Base_Controller {
 		$validation = Validator::make( Input::all(), static::$rules );
 
 		if ($validation->fails()){
-			return Redirect::back()->with('message', 'Något gick fel, försök igen!');
+			return Redirect::back()
+				->with('message', 'Något gick fel, försök igen!');
 		}
 
 		$user_comment =array(
@@ -47,7 +48,9 @@ class Pubs_Controller extends Base_Controller {
 		));
 
 		$comment = new Comment($user_comment);
+
 	    $comment->save();
+	    
 	    	return Redirect::back()
 				->with('message', 'Kommentar tillagd');
 	}		

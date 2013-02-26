@@ -6,7 +6,7 @@
 	General
 ------------------------*/
 
-body, div, dl, dt, input, li, p, ul, button{
+body, div, input, li, p, ul, button{
 	font-family: 'museo_slab', serif;
 	line-height: normal;
 }
@@ -115,13 +115,13 @@ input{
 	Content
 ------------------------*/
  
-.content-holder dt{
+/*.content-holder dt{
 	margin-bottom: 10px;
 }
 .content-holder dt i{
 	margin-right:10px;
 	color:#96af5b;
-}
+}*/
 
 .content-badge{
 	text-align: center;
@@ -129,6 +129,14 @@ input{
 
 .pub-info .pub-text{
 	margin: 10px 0;
+}
+
+.icon-star-empty{
+	color:rgb(236,188,70);
+}
+
+.comment-list .icon-comment-alt{
+	color:white;
 }
 
 /*-----------------------
