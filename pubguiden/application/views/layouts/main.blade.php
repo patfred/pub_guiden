@@ -58,7 +58,8 @@
     {{ HTML::script('js/bootstrap.min.js') }}
     {{ HTML::script('js/app.js') }}
     {{ HTML::script('js/jquery.rating.js') }}
-    {{ HTML::script('js/geolocation.js') }}  
+    {{ HTML::script('js/geolocation.js') }} 
 
+    @yield('scripts') 
     </body>
 </html>

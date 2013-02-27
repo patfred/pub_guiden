@@ -3,7 +3,8 @@
 class Pubs_Controller extends Base_Controller {
 	public $restful = true;
 
-	public function get_index($id){
+	public function get_index($id)
+	{
 
 		$pub = Pub::find($id);
 
@@ -33,7 +34,8 @@ class Pubs_Controller extends Base_Controller {
         'comment' => 'required|min:10|max:300'
     );
 
-	public function post_comment(){
+	public function post_comment()
+	{
 		$validation = Validator::make( Input::all(), static::$rules );
 
 		if ($validation->fails()){
@@ -53,5 +55,16 @@ class Pubs_Controller extends Base_Controller {
 	    
 	    	return Redirect::back()
 				->with('message', 'Kommentar tillagd');
+	}
+
+	public function get_fetch_json() 
+	{
+		$pubs = Pub::all();
+		return Response::json( $pubs );
 	}		
+	public function get_test() 
+	{
+		$pubs = Pub::all();
+		return View::make('home.test');
+	}
 }
