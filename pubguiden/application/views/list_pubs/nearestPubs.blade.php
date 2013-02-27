@@ -17,8 +17,8 @@
 	<script>
 		$.get('http://localhost/pub_guiden/pubguiden/public/home/json', function(result){
 		if( sessionStorage.lat ){
-			for(var i=1; i<result.length; i++){
-				$('#pub_' + i).append("<p>Du är X meter ifrån " + result[i].attributes.name + "</p>")
+			for(var i=0; i<result.length; i++){
+				$('#pub_' + (i+1) ).append("<p>Du är X meter ifrån " + result[i].attributes.name + "</p>")
 					.append('<p>Lat:' + sessionStorage.lat + '</p>')
 					.append('<p>Long:' + sessionStorage.lng + '</p>');
 			}
