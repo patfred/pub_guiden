@@ -19,19 +19,26 @@
 		</a>
 		<a href="<?php echo URL::to_action('categories@index') ?>">
 			<div class='home-menu content-holder'>
-				Kategorier
+				Topplistor
+				<i class="icon-angle-right icon-large"></i>
+			</div>
+		</a>
+		<a href="<?php echo URL::to_action('') ?>">
+			<div class='home-menu content-holder'>
+				Quiz
+				<i class="icon-angle-right icon-large"></i>
+			</div>
+		</a>
+		<a href="<?php echo URL::to_action('') ?>">
+			<div class='home-menu content-holder'>
+				After Work
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>
 
 		<!-- Lägger denna här så länge, orkar inte skriva in i adressfältet helatiden -->
 
-		<a href="<?php echo URL::to_action('admins@index') ?>">
-			<div class='home-menu content-holder'>
-				Admin
-				<i class="icon-angle-right icon-large"></i>
-			</div>
-		</a>	
+			
 
 	</section>	
 @endsection

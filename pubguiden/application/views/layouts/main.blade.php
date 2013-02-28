@@ -52,6 +52,10 @@
         
         <footer class="container">
             <p> &copy; Pubguiden 2013</p>
+            <p><a href="<?php echo URL::to_action('admins@index') ?>">         
+                Admin
+                </a>
+            </p>
         </footer>
 
     {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js') }}
