@@ -17,7 +17,7 @@
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>
-		<a href="<?php echo URL::to_action('categories@index') ?>">
+		<a href="<?php echo URL::to_action('list_pubs@categories') ?>">
 			<div class='home-menu content-holder'>
 				Topplistor
 				<i class="icon-angle-right icon-large"></i>

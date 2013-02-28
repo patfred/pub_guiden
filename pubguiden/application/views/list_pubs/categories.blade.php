@@ -7,35 +7,35 @@
 	
 	<a href="<?php echo URL::to_action('list_pubs@top_list_service') ?>">
 			<div class='home-menu content-holder'>
-				<p>Service</p>
+				Service
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>
 
 	<a href="<?php echo URL::to_action('list_pubs@top_list_atmosphere') ?>">
 		<div class='home-menu content-holder'>
-			<p>Atmosfär</p>
+			Atmosfär
 			<i class="icon-angle-right icon-large"></i>
 		</div>
 	</a>
 
 	<a href="<?php echo URL::to_action('list_pubs@top_list_food') ?>">
 		<div class='home-menu content-holder'>
-			<p>Mat</p>
+			Mat
 			<i class="icon-angle-right icon-large"></i>
 		</div>
 	</a>
 
 	<a href="<?php echo URL::to_action('list_pubs@top_list_place') ?>">
 		<div class='home-menu content-holder'>
-			<p>Lokal</p>
+			Lokal
 			<i class="icon-angle-right icon-large"></i>
 		</div>
 	</a>
 
 	<a href="<?php echo URL::to_action('list_pubs@top_list_assortments') ?>">
 		<div class='home-menu content-holder'>
-			<p>Utbud</p>
+			Utbud
 			<i class="icon-angle-right icon-large"></i>
 		</div>
 	</a>

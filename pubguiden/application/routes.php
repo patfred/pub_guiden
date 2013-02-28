@@ -45,8 +45,14 @@ Route::post('pub/(:all)',array('before'=>'csrf','uses'=>'pubs@comment'));
 Route::get('list_pubs/top20',array('as'=>'list_pubs','uses'=>'list_pubs@top20'));
 Route::get('list_pubs/nearestPubs',array('as'=>'list_pubs','uses'=>'list_pubs@nearestPubs'));
 
-///////// These Routes belongs to CATEGORIES /////////
-Route::get('categories/index', 'home@categories');
+///////// These Routes belongs to list_pubs /////////
+Route::get('list_pubs/categories', 'list_pubs@categories');
+Route::get('list_pubs/top_list_service', 'list_pubs@top_list_service');
+Route::get('list_pubs/top_list_atmosphere', 'list_pubs@top_list_atmosphere');
+Route::get('list_pubs/top_list_food', 'list_pubs@top_list_food');
+Route::get('list_pubs/top_list_place', 'list_pubs@top_list_place');
+Route::get('list_pubs/top_list_assortments', 'list_pubs@top_list_assortments');
+
 
 ///////// These Routes belongs to SEARCH /////////
 Route::post('search/index', array('before'=>'csrf', 'uses'=>'search@index'));
@@ -61,8 +67,8 @@ Route::get('admins/edit', array('as'=>'edit_pub','uses'=>'admins@edit'));
 Route::get('admins/edit/(:any)', array('as'=>'edit','uses'=>'admins@edit_pub'));
 Route::put('admins/update', array('uses'=>'admins@update'));
 
-Route::get('home/json', array('as' => 'json_test', 'uses' => 'pubs@fetch_json'));
-Route::get('home/test', array('as' => 'test', 'uses' => 'pubs@test'));
+
+
 
 
 /*
