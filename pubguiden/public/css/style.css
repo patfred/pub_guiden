@@ -31,6 +31,7 @@ form{
 
 ul{
 	list-style: none;
+	margin:0;
 }
 
 input{
@@ -97,7 +98,7 @@ input{
 .home-menu{	
 	font-size: 1.5em;
 	padding: 20px 15px 0px 15px;
-	height:50px;
+	height:45px;
 }
 .home-menu i{
 	color:#96af5b;
@@ -137,6 +138,82 @@ input{
 
 .comment-list .icon-comment-alt{
 	color:white;
+	
+}
+
+/*.pub-header h2{
+	display:inline;
+	padding-top: 15px;
+}
+.pub-header{
+	margin-bottom: 10px;
+	height:68px;
+}*/
+/*-----------------------
+	Top-lists
+------------------------*/
+.top-list{
+/*	list-style: decimal;
+	list-style-position: inside;*/
+/*	color:white;*/
+}
+ol.top-list{
+	counter-reset: li; /* Initiate a counter */
+	list-style: none; /* Remove default numbering */
+	*list-style: decimal; /* Keep using default numbering for IE6/7 */
+}
+.top-list li{
+	background: url('../img/bg.png');
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 8px 6px -6px #000;
+  	-moz-box-shadow: 0 8px 6px -6px #000;
+  	box-shadow: 0 8px 6px -6px #000;
+  	padding: 5px 0 5px 0;
+}
+
+.top-list a{
+	position: relative;
+	display: block;
+	padding: .4em .4em .4em 2em;
+	*padding: .4em;
+	margin: .5em 0;
+/*	background: #ddd;*/
+/*	color: #444;*/
+	text-decoration: none;
+	border-radius: .3em;
+	transition: all .3s ease-out;	
+}
+
+/*.top-list a:hover{
+	background: #eee;
+}*/
+
+.top-list a:hover:before{
+    transform: rotate(360deg);	
+    background: #96af5b;
+    color:white;
+}
+.top-list a:before{
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;	
+	left: -1.3em;
+	top: 50%;
+	margin-top: -1.3em;
+	background: url('../img/bg.png');
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	border: .3em solid #fff;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 2em;
+	transition: all .3s ease-out;
+	-webkit-box-shadow: 5px 5px 6px -6px #000;
+  	-moz-box-shadow: 5px 5px 6px -6px #000;
+  	box-shadow: 5px 5px 6px -6px #000;
 }
 
 /*-----------------------
@@ -160,6 +237,8 @@ input{
 	padding: 30px 0 18px 0;
 	text-align: center;
 	font-size: 16px;
+/*	display:inline-block;
+	float:right;*/
 }
 
 .small-rating{
@@ -228,9 +307,9 @@ input{
 	Login/signup
 ------------------------*/
 .user-email{
-	display:inline;
-	margin-right: 20px;
 	color:white;
+	margin-bottom: 15px;
+	height:25px;
 }
 
 .dashboard li{
@@ -264,6 +343,7 @@ input{
 
 .comment-text{
 	width:100%;
+	height:80px;
 }
 
 .comment{

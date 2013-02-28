@@ -2,8 +2,8 @@
 @section('content')
 <section class="content container">
 	<h2> {{ $pub->name }} </h2>
-	
-	<div class="big-rating"> {{ $ratings }} </div>
+	<div class="pub-text"><strong>Adress:</strong> {{ $pub->address }}</div>
+	<div class="big-rating"> {{ $ratings }} </div>	
 	<section class="pub-info">
 		<div class="pub-text"> {{ $pub->description }} </div>
 		<div class="pub-text"><strong>Adress:</strong> {{ $pub->address }}</div>		
@@ -65,7 +65,7 @@
 	<h3>Kommentarer</h3>
 	@foreach ($comments as $comment)
 		<div class="comment">
-	    	<h4> {{ $comment->user->username }}</h4> 
+	    	<h4> {{ $comment->user->username }} </h4> 
 	    	<span class="comment-date"> <i class="icon-time"></i> {{ $comment->created_at }} </span>
 	    	<p><i class="icon-comment-alt"></i>{{ e($comment->comment) }}</p>
 	    </div>	
