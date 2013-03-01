@@ -15,7 +15,7 @@
 @endsection
 @section('scripts')
 	<script>
-		$.get('http://localhost/pub_guiden/pubguiden/public/home/json', function(result){
+		$.get('http://localhost:8888/pub_guiden/pubguiden/public/home/json', function(result){
 			if( sessionStorage.lat ){
 				var myLat = sessionStorage.lat;
 				var myLong = sessionStorage.lng;
