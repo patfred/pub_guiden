@@ -68,7 +68,7 @@ Route::get('admins/edit', array('as'=>'edit_pub','uses'=>'admins@edit'));
 Route::get('admins/edit/(:any)', array('as'=>'edit','uses'=>'admins@edit_pub'));
 Route::put('admins/update', array('uses'=>'admins@update'));
 
-
+Route::get('home/json', array('as' => 'json_test', 'uses' => 'pubs@fetch_json'));
 
 
 
