@@ -1,5 +1,5 @@
 @layout('layouts/main')
-
+@section('content')
 <section class="content container">
 	<h2>
 		Topplistor
@@ -40,8 +40,5 @@
 		</div>
 	</a>
 
-
-
-
-
 </section>	
+@endsection
