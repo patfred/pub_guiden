@@ -52,7 +52,8 @@ Route::get('list_pubs/top_list_atmosphere', 'list_pubs@top_list_atmosphere');
 Route::get('list_pubs/top_list_food', 'list_pubs@top_list_food');
 Route::get('list_pubs/top_list_place', 'list_pubs@top_list_place');
 Route::get('list_pubs/top_list_assortments', 'list_pubs@top_list_assortments');
-
+Route::get('list_pubs/afterworks', 'list_pubs@afterwork');
+Route::get('list_pubs/quiz', 'list_pubs@quiz');
 
 ///////// These Routes belongs to SEARCH /////////
 Route::post('search/index', array('before'=>'csrf', 'uses'=>'search@index'));

@@ -23,13 +23,13 @@
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>
-		<a href="<?php echo URL::to_action('') ?>">
+		<a href="<?php echo URL::to_action('list_pubs@quiz') ?>">
 			<div class='home-menu content-holder'>
 				Quiz
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>
-		<a href="<?php echo URL::to_action('') ?>">
+		<a href="<?php echo URL::to_action('list_pubs@afterwork') ?>">
 			<div class='home-menu content-holder'>
 				After Work
 				<i class="icon-angle-right icon-large"></i>
