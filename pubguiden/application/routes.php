@@ -68,12 +68,8 @@ Route::get('admins/edit', array('as'=>'edit_pub','uses'=>'admins@edit'));
 Route::get('admins/edit/(:any)', array('as'=>'edit','uses'=>'admins@edit_pub'));
 Route::put('admins/update', array('uses'=>'admins@update'));
 
--Route::get('home/json', array('as' => 'json_test', 'uses' => 'pubs@fetch_json'));
-65	  	
--Route::get('home/test', array('as' => 'test', 'uses' => 'pubs@test'));
 
-
-
+Route::get('home/json', array('as' => 'json_test', 'uses' => 'pubs@fetch_json'));
 
 
 /*
