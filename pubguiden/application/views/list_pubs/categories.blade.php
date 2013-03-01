@@ -2,7 +2,7 @@
 
 <section class="content container">
 	<h2>
-		Kategorier
+		Topplistor
 	</h2>
 	
 	<a href="<?php echo URL::to_action('list_pubs@top_list_service') ?>">

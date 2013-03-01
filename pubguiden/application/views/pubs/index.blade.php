@@ -1,11 +1,15 @@
 @layout('layouts/main') 
 @section('content')
 <section class="content container">
-	<h2> {{ $pub->name }} </h2>
-	<div class="pub-text"><strong>Adress:</strong> {{ $pub->address }}</div>
-	<div class="big-rating"> {{ $ratings }} </div>	
-	<section class="pub-info">
+	
+
+		<h2> {{ $pub->name }} </h2>
+	<section class="pub-info group-holder">
+		<div class="big-rating"> {{ $ratings }} </div>
 		<div class="pub-text"> {{ $pub->description }} </div>
+	</section>
+
+	<section class="pub-info group-holder">
 		<div class="pub-text"><strong>Adress:</strong> {{ $pub->address }}</div>		
 		<div class="pub-text"><strong>Billigaste öl:</strong> {{ $pub->lowest_price }} kr</div>
 		<div class="pub-text"><strong>Quiz?</strong> 
@@ -22,20 +26,22 @@
 		    	Ja
 		    @endif
 		</div>
+	</section>	
+	<section class="pub-info group-holder">	
 		<div class="category-rating"> <div class="cat-name"> Service </div> <div class="small-rating"> {{ $service }} </div> </div>
 		<div class="category-rating"> <div class="cat-name"> Mat </div> <div class="small-rating"> {{ $food }} </div> </div>
 		<div class="category-rating"> <div class="cat-name"> Atmosfär </div> <div class="small-rating"> {{ $atmosphere }} </div> </div>
 		<div class="category-rating"> <div class="cat-name"> Lokal </div> <div class="small-rating"> {{ $place }} </div> </div>
 		<div class="category-rating"> <div class="cat-name"> Utbud </div> <div class="small-rating"> {{ $assortments }} </div> </div>
-	</section>	
-
-	<div class="rate-button">
+	
+		<div class="rate-button">
 		@if (isset(Auth::user()->id))
 			{{ HTML::link_to_action("ratings@index", 'Sätt betyg', array($pub->id)) }}
 		@else
 	  		{{ HTML::link('/login', 'Logga in för att sätta betyg.') }} 
 	 	@endif
 	</div>
+	</section>	
 
 	<!-- Show comment form if user is logged in -->	
 	@if (isset(Auth::user()->id))

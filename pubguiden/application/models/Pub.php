@@ -28,21 +28,21 @@ class Pub_with_rating {
 	var $name;
 	var $id;
 	var $rating;
-	var $ratings_service;
-	var $ratings_atmosphere;
-	var $ratings_food;
-	var $rating_place;
-	var $rating_assortments;
-	function Pub_with_rating($name, $id, $rating, $ratings_service,$ratings_atmosphere,$ratings_food,$rating_place,$rating_assortments)
+	var $service_rating;
+	var $atmosphere_rating;
+	var $food_rating;
+	var $place_rating;
+	var $assortments_rating;
+	function Pub_with_rating($name, $id, $rating, $service_rating, $atmosphere_rating, $food_rating, $place_rating, $assortments_rating)
     {
 	    $this->name = $name;
 		$this->id = $id;
 		$this->rating = $rating;
-		$this->ratings_service = $ratings_service;
-		$this->ratings_atmosphere = $ratings_atmosphere;
-		$this->ratings_food = $ratings_food;
-		$this->rating_place = $rating_place;
-		$this->rating_assortments = $rating_assortments;
+		$this->service_rating= $service_rating;
+		$this->atmosphere_rating= $atmosphere_rating;
+		$this->food_rating = $food_rating;
+		$this->place_rating = $place_rating;
+		$this->assortments_rating = $assortments_rating;
     }
 }
 

@@ -1,6 +1,7 @@
 @layout('layouts/main')
 @section('content')
-<section class='content container ratings'>
+<section class="content container ratings">
+<section class="group-holder">
 @foreach($pubs as $pub)
 	<h2>Sätt betyg på {{$pub->name}}</h2>
 @endforeach
@@ -62,5 +63,6 @@
 	@if (Session::has('message'))
         <p class=""> <i class='icon-ok-circle'></i>{{ Session::get('message') }}</p>
     @endif
+    </section>
 </section>
 @endsection

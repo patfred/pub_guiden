@@ -12,6 +12,8 @@ body, div, input, li, p, ul, button{
 }
 h1,h2,h3,h4,h5{
 	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
 }
 a {
 	text-decoration: none; 
@@ -68,10 +70,13 @@ input{
 }
 .menu-top .logo{
 	font-family: 'Lobster', cursive;
-  	text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+	text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
 	font-size: 2.3em;
 	color:#96af5b;
 	margin-top: 10px;
+}
+.menu-top .logo a{
+	color:#96af5b;
 }
 .menu-top .menu-icons{
 	margin:10px 0px 0px 35px;
@@ -115,17 +120,22 @@ input{
 /*-----------------------
 	Content
 ------------------------*/
- 
-/*.content-holder dt{
-	margin-bottom: 10px;
+.group-holder{
+	background: white;
+	padding:5px 20px 5px 20px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 8px 6px -6px #000;
+  	-moz-box-shadow: 0 8px 6px -6px #000;
+  	box-shadow: 0 8px 6px -6px #000;
 }
-.content-holder dt i{
-	margin-right:10px;
-	color:#96af5b;
-}*/
 
-.content-badge{
-	text-align: center;
+.group-holder form{
+	margin-bottom: 5px;
+}
+.pub-info .small-rating{
+	color:rgb(51, 51, 51);
 }
 
 .pub-info .pub-text{
@@ -141,21 +151,10 @@ input{
 	
 }
 
-/*.pub-header h2{
-	display:inline;
-	padding-top: 15px;
-}
-.pub-header{
-	margin-bottom: 10px;
-	height:68px;
-}*/
 /*-----------------------
 	Top-lists
 ------------------------*/
 .top-list{
-/*	list-style: decimal;
-	list-style-position: inside;*/
-/*	color:white;*/
 }
 ol.top-list{
 	counter-reset: li; /* Initiate a counter */
@@ -164,6 +163,7 @@ ol.top-list{
 }
 .top-list li{
 	background: url('../img/bg.png');
+	position: relative;
 	margin-top: 5px;
 	margin-bottom: 15px;
 	border-radius: 5px;
@@ -179,19 +179,11 @@ ol.top-list{
 	padding: .4em .4em .4em 2em;
 	*padding: .4em;
 	margin: .5em 0;
-/*	background: #ddd;*/
-/*	color: #444;*/
 	text-decoration: none;
 	border-radius: .3em;
-	transition: all .3s ease-out;	
 }
 
-/*.top-list a:hover{
-	background: #eee;
-}*/
-
 .top-list a:hover:before{
-    transform: rotate(360deg);	
     background: #96af5b;
     color:white;
 }
@@ -210,10 +202,16 @@ ol.top-list{
 	text-align: center;
 	font-weight: bold;
 	border-radius: 2em;
-	transition: all .3s ease-out;
 	-webkit-box-shadow: 5px 5px 6px -6px #000;
   	-moz-box-shadow: 5px 5px 6px -6px #000;
   	box-shadow: 5px 5px 6px -6px #000;
+}
+
+.top-list .small-rating{
+	position:absolute;
+	right:3px;
+	z-index: 50;
+	top:5px;
 }
 
 /*-----------------------
@@ -269,7 +267,6 @@ ol.top-list{
 .user-buttons, 
 .rate-button{
 	border:none;
-	color:white;
 	margin-top: 5px;
 	margin-bottom: 15px;
 	border-radius: 5px;
@@ -285,6 +282,19 @@ ol.top-list{
 .logout-button, 
 .rate-button{
  	background: url('../img/bg.png');
+ 	color:white;
+}
+
+.login-signup input[type="submit"]:hover, 
+.ratings input[type="submit"]:hover,
+.comment-form input[type="submit"]:hover,
+.logout-button:hover, 
+.user-buttons:hover, 
+.rate-button:hover{
+	-webkit-box-shadow: 0 8px 6px -6px #96af5b;
+  	-moz-box-shadow: 0 8px 6px -6px #96af5b;
+  	box-shadow: 0 8px 6px -6px #96af5b;
+  	color: #96af5b;
 }
 .user-buttons{
 	background: white;
@@ -292,7 +302,9 @@ ol.top-list{
 	display:inline;
 }
 .user-buttons a, 
-.user-buttons i{
+.user-buttons i,
+.logout-button a, 
+.user-buttons a{
 	color:rgb(51, 51, 51);
 }
 .user-buttons i, 

@@ -7,7 +7,7 @@
 		</div>
 		<a href="<?php echo URL::to_action('list_pubs@top20') ?>">
 			<div class='home-menu content-holder'>
-				Topp 20
+				Topplistan
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>		
@@ -19,7 +19,7 @@
 		</a>
 		<a href="<?php echo URL::to_action('list_pubs@categories') ?>">
 			<div class='home-menu content-holder'>
-				Topplistor
+				Övriga topplistor
 				<i class="icon-angle-right icon-large"></i>
 			</div>
 		</a>

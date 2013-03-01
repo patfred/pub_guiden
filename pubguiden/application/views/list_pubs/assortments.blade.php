@@ -2,10 +2,12 @@
 
 @section('content')
 <section class="content container">
-	<h2>Topplistan</h2>	
-	<p> här hittar du pubbarna med högst betyg </p>
+	<h2>Topplistan - Utbud</h2>	
 
-	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->	
+	<p>Pubar sorterade på högst betyg inom utbud</p>
+
+	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->
+	
 	<?php function subval_sort($a,$subkey) {
 			foreach($a as $k=>$v) {
 				$b[$k] = strtolower($v[$subkey]);
@@ -17,12 +19,12 @@
 		return $c;
 		}
 
-		$pub_ratings = subval_sort($pub_ratings,'rating'); 	
+		$pub_ratings = subval_sort($pub_ratings,'assortments'); 	
 	?>	
 
 	<ol class="top-list">	
 	@foreach($pub_ratings as $rating)
-		<li> {{ HTML::link_to_action("pubs@index", $rating['name'], array($rating['id'])) }} <div class="small-rating">{{$rating['rating'] }}</li>
+		<li> {{ HTML::link_to_action("pubs@index", $rating['name'], array($rating['id'])) }} <div class="small-rating">{{$rating['assortments'] }}</li>
 	@endforeach	
 	</ol>
 </section>	
