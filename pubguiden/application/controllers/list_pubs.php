@@ -114,8 +114,13 @@ class List_Pubs_Controller extends Base_Controller {
 			
 			$i++;
 		}
-		$result /= $i;
-		return $result;
+		if($result != 0){
+			$result /= $i;
+			return $result;
+		}
+		else{
+			return $result;
+		}
 	}
 
 	public function get_nearestPubs()
