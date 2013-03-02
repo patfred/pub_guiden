@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="content container">
-	<h2>Topplistan</h2>	
+	<h1>Topplistan</h1>	
 	<p> här hittar du pubbarna med högst betyg </p>
 
 	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->	

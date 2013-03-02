@@ -108,7 +108,7 @@ class List_Pubs_Controller extends Base_Controller {
 					break;				
 				
 				default:
-					# code...
+					$result += 1;
 					break;
 			}
 			

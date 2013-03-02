@@ -12,11 +12,13 @@
 		
 		<div class="span6">
 		 	<h3>Senast betygsatta pubar</h3>
+		 	<p>För att ändra ett betyg, gå in på puben och tryck på betygsätt. Ditt gamla betyg kommer ersättas med ditt nya betyg!</p>
 		 	<ul class="rating-list">
 				@foreach (Rating::where_user_id(Auth::user()->id)->order_by('created_at', 'desc')->take(10)->get() as $rating)
 				 <li> 
-				 	<i class="icon-star-empty"></i> {{ $rating->created_at }} 
-				 	<span>{{ $rating->pub->name }}</span>
+				 	<i class="icon-star"></i>
+				 	<span>{{ HTML::link_to_action("pubs@index", $rating->pub->name, array($rating->pub->id)) }}</span>
+				 	<p class="date">{{ $rating->updated_at }}</p> 
 				 </li>
 				@endforeach
 
@@ -28,11 +30,11 @@
 			<ul class="comment-list">
 				@foreach (Comment::where_user_id(Auth::user()->id)->order_by('created_at', 'desc')->take(10)->get() as $comment)
 				 <li> 
-				 	<i class="icon-comment-alt"></i> {{ $comment->comment }} 
-				 	<p> Postad i  
-				 		<span>{{ $comment->pub->name }}</span> 
-				 		{{ $comment->created_at }} 
+				 	<i class="icon-comment"></i> "{{ $comment->comment }}" 
+				 	<p>Postad i {{ HTML::link_to_action("pubs@index", $comment->pub->name, array($comment->pub->id)) }}
+				 		<span class="date">{{ $comment->created_at }} </span>
 				 	</p>
+				 	
 				 </li>
 				@endforeach
 			</ul>

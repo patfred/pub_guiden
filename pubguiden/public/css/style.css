@@ -13,7 +13,12 @@ body, div, input, li, p, ul, button{
 h1,h2,h3,h4,h5{
 	font-family: 'Lobster', cursive;
 	font-weight: normal;
+}
+h1{
 	text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+}
+h2,h3,h4,h5{
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
 }
 a {
 	text-decoration: none; 
@@ -80,8 +85,12 @@ input{
 }
 .menu-top .menu-icons{
 	margin:10px 0px 0px 35px;
-	color:rgb(255, 255, 255);
+	color:whitesmoke;
 	float:right;
+}
+
+.search{
+
 }
 
 #show-search, 
@@ -121,7 +130,7 @@ input{
 	Content
 ------------------------*/
 .group-holder{
-	background: white;
+	background: whitesmoke;
 	padding:5px 20px 5px 20px;
 	margin-top: 5px;
 	margin-bottom: 15px;
@@ -138,30 +147,37 @@ input{
 	color:rgb(51, 51, 51);
 }
 
+.pub-head .big-rating{
+	display:inline-table;
+	margin-right: 20px;
+}
+
+.pub-head h1{
+	display:inline-table;
+}
+
+.pub-info i{
+	color:#96af5b;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+	margin-right: 5px;
+}
 .pub-info .pub-text{
 	margin: 10px 0;
 }
 
-.icon-star-empty{
-	color:rgb(236,188,70);
-}
-
-.comment-list .icon-comment-alt{
-	color:white;
-	
-}
-
 /*-----------------------
-	Top-lists
+	Pub-lists
 ------------------------*/
 .top-list{
+
 }
 ol.top-list{
 	counter-reset: li; /* Initiate a counter */
 	list-style: none; /* Remove default numbering */
 	*list-style: decimal; /* Keep using default numbering for IE6/7 */
 }
-.top-list li{
+.top-list li,
+.pub-list li{
 	background: url('../img/bg.png');
 	position: relative;
 	margin-top: 5px;
@@ -173,7 +189,8 @@ ol.top-list{
   	padding: 5px 0 5px 0;
 }
 
-.top-list a{
+.top-list a,
+.pub-list a{
 	position: relative;
 	display: block;
 	padding: .4em .4em .4em 2em;
@@ -185,7 +202,7 @@ ol.top-list{
 
 .top-list a:hover:before{
     background: #96af5b;
-    color:white;
+    color:whitesmoke;
 }
 .top-list a:before{
 	content: counter(li);
@@ -198,7 +215,7 @@ ol.top-list{
 	height: 2em;
 	width: 2em;
 	line-height: 2em;
-	border: .3em solid #fff;
+	border: .3em solid whitesmoke;
 	text-align: center;
 	font-weight: bold;
 	border-radius: 2em;
@@ -256,6 +273,16 @@ ol.top-list{
 	font-weight: bold;
 	width: 100px;
 }
+
+.ratings a, .ratings i{
+	color: #800000;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	display:inline-block;
+}
+.rate-message{
+	color: #337109;
+}	 
 /*-----------------------
 	Buttons - Login, rating, comment
 ------------------------*/
@@ -282,7 +309,7 @@ ol.top-list{
 .logout-button, 
 .rate-button{
  	background: url('../img/bg.png');
- 	color:white;
+ 	color:whitesmoke;
 }
 
 .login-signup input[type="submit"]:hover, 
@@ -296,14 +323,13 @@ ol.top-list{
   	box-shadow: 0 8px 6px -6px #96af5b;
   	color: #96af5b;
 }
-.user-buttons{
-	background: white;
+.user-buttons, .search{
+	background: whitesmoke;
 	margin-right: 20px;
 	display:inline;
 }
 .user-buttons a, 
-.user-buttons i,
-.logout-button a, 
+.user-buttons i, 
 .user-buttons a{
 	color:rgb(51, 51, 51);
 }
@@ -319,13 +345,9 @@ ol.top-list{
 	Login/signup
 ------------------------*/
 .user-email{
-	color:white;
+	color:whitesmoke;
 	margin-bottom: 15px;
 	height:25px;
-}
-
-.dashboard li{
-	margin-bottom: 10px;
 }
 
 .error, .notification{
@@ -346,6 +368,48 @@ ol.top-list{
 .login-signup input[type="password"]{
 	height:35px;
 }
+
+/*-----------------------
+	User dashboard
+------------------------*/
+
+.dashboard .span6{
+	background: whitesmoke;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 8px 6px -6px #000;
+  	-moz-box-shadow: 0 8px 6px -6px #000;
+  	box-shadow: 0 8px 6px -6px #000;
+}
+
+.dashboard .span6 ul, 
+.dashboard .span6 h3, 
+.dashboard .span6 p{
+	padding:0 20px 5px;
+}
+
+.dashboard .span6 a{
+	color:rgb(51,51,51);
+}
+
+.dashboard .span6 a:hover{
+	color: #96af5b;	
+}
+.dashboard li{
+	margin-bottom: 10px;
+}
+.date{
+	font-size: 11px;
+	display:block;
+	color: #96af5b;	
+
+}
+.icon-star{
+	color:rgb(236,188,70);
+}
+
+.comment-list .icon-comment{
+	color: #96af5b;	
+}
 /*-----------------------
 	Comments
 ------------------------*/
@@ -359,7 +423,7 @@ ol.top-list{
 }
 
 .comment{
-	background:white;
+	background:whitesmoke;
 	border-radius: 5px; 
 	padding:5px 10px;
 	margin-bottom: 10px;
@@ -382,12 +446,21 @@ ol.top-list{
 	margin-bottom: 5px;
 }
 
+.success-msg{
+	font-size: 16px;
+	color: #337109; 
+}
+.error-msg{
+	font-size: 16px;
+	color: #800000;
+}
+
 /*-----------------------
 	Footer
 ------------------------*/
 footer{
 	margin-top:30px;
-	color:white;
+	color:whitesmoke;
 }
 
 /*-----------------------

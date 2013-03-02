@@ -40,7 +40,7 @@ class Pubs_Controller extends Base_Controller {
 
 		if ($validation->fails()){
 			return Redirect::back()
-				->with('message', 'Något gick fel, försök igen!');
+				->with('error-message', 'Något gick fel, försök igen!');
 		}
 
 		$user_comment =array(

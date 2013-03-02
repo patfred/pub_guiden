@@ -3,7 +3,7 @@
 <section class="content container ratings">
 <section class="group-holder">
 @foreach($pubs as $pub)
-	<h2>Sätt betyg på {{$pub->name}}</h2>
+	<h1>Sätt betyg på {{$pub->name}}</h1>
 @endforeach
 {{ Form::open() }}
 	
@@ -60,9 +60,8 @@
 	{{ Form::submit('Skicka') }}
 	{{ Form::close() }}
 
-	@if (Session::has('message'))
-        <p class=""> <i class='icon-ok-circle'></i>{{ Session::get('message') }}</p>
-    @endif
+	<i class="icon-undo"></i>{{ HTML::link_to_action("pubs@index", "Ångra och gå tillbaka", array($pub->id))}}
+
     </section>
 </section>
 @endsection

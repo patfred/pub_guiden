@@ -6,7 +6,7 @@
 	<p>Din position:	
 	<p id="demo"></p>
 	<p id="json_test"></p>
-	<ul>
+	<ul class="pub-list">
 		@foreach($pubs as $pub)
 			<li>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }}<span id="pub_<?php echo $pub->id; ?>"></span></li>
 		@endforeach

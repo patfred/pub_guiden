@@ -2,6 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="/pub_guiden/pubguiden/public/favicon.png" />
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" />
         <title>Pubguiden</title>
         {{ HTML::script('js/modernizr.js') }}
         {{ HTML::style('css/bootstrap.min.css') }}
@@ -26,7 +31,9 @@
                     {{ Form::open('search/index', 'POST', array('id' => 'search', 'class'=>'search_form')) }}
                     {{ Form::token() }}
                     {{ Form::text('search_string','', array('id'=> 'search_string', 'class' => 'search_string', 'placeholder'=>'Sök...')) }}
-                    {{ Form::submit('sök') }}
+                    <button type="submit" class="search">
+                        <i class="icon-search icon-large"></i>
+                    </button>
                     {{ Form::close() }}
                     <!-- <a href="#"><i class="icon-search icon-large"></i> </a> -->
                 </div>
@@ -52,8 +59,8 @@
         
         <footer class="container">
             <p> &copy; Pubguiden 2013</p>
-            <p><a href="<?php echo URL::to_action('admins@index') ?>">         
-                Admin
+            <p> <a href="<?php echo URL::to_action('admins@index') ?>">         
+                <i class="icon-magic"></i> Admin
                 </a>
             </p>
         </footer>

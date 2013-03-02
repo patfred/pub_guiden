@@ -36,9 +36,5 @@
 			</div>
 		</a>
 
-		<!-- Lägger denna här så länge, orkar inte skriva in i adressfältet helatiden -->
-
-			
-
 	</section>	
 @endsection

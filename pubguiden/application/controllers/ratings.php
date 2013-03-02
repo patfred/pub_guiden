@@ -27,8 +27,8 @@ class Ratings_Controller extends Base_Controller {
 			   $id->place = Input::get('place');
 			   $id->assortments = Input::get('assortments');
 			$id->save();   
-			return Redirect::back()
-				->with('message', 'Betyg uppdaterat');
+			return Redirect::to_action("pubs@index", array($pubid))
+				->with('rate-message', 'Ditt betyg är uppdaterat');
 		} else {
 		//If new rating save	 	
 			$user_rating = array(
@@ -44,8 +44,8 @@ class Ratings_Controller extends Base_Controller {
 		$rating = new Rating($user_rating);
 	    
 	    $rating->save();
-	    	return Redirect::back()
-				->with('message', 'Betyg tillagt');
+	    	return Redirect::to_action("pubs@index", array($pubid))
+				->with('rate-message', 'Ditt betyg är tillagt!');
 		}		
 	}
 }

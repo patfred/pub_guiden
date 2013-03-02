@@ -1,9 +1,9 @@
 @layout('layouts/main')
 @section('content')
 <section class="content container">
-	<h2>
+	<h1>
 		Topplistor
-	</h2>
+	</h1>
 	
 	<a href="<?php echo URL::to_action('list_pubs@top_list_service') ?>">
 			<div class='home-menu content-holder'>
