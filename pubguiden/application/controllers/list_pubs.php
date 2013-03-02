@@ -125,8 +125,9 @@ class List_Pubs_Controller extends Base_Controller {
 
 	public function get_nearestPubs()
 	{		
+		$pubs = Pub::all();
 		return View::make('list_pubs.nearestPubs')
-				->with('pubs', Pub::all());	
+				->with('pubs', $pubs);	
 	}
 	public function get_categories() 
 	{

@@ -2,12 +2,7 @@
 
 @section('content')
 <section class="content container">
-	<h1>Pubar nära dig</h1>
-	<p class="info-block">Din position:
 
-	<!-- geo-info shows current position for user -->
-		<span id="geo-info"></span>
-	</p>
 	<ol class="top-list">
 		@foreach($pubs as $pub)
 			<li>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }}<span id="pub_{{ $pub->id}}"><i class="icon-double-angle-right"></i></span></li>
