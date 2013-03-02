@@ -1,4 +1,4 @@
-var x=document.getElementById("demo");
+var x=document.getElementById("geo-info");
 function getLocation()
   {
   if (navigator.geolocation)
@@ -13,18 +13,9 @@ function showPosition(position)
      sessionStorage.lng = position.coords.longitude
 
 
-  var tempString ="Latitude: " + sessionStorage.lat + 
-  "<br>Longitude: " + sessionStorage.lng;  
-
-    // flyttas senare
-    //$.getJSON(Hämta position som JSON från pubs-controller här);
-
-    var pubLat = 57.706738;
-    var pubLong = 11.97037;
-    var dist = calcDistance(pubLat, pubLong);
-    tempString += "<br>Avstånd från nuvarande position till påhittad position som ska hämtas från databas sen: <br />" + dist + ' km <br />';
-
-    x.innerHTML = tempString;
+  var tempString ='<i class="icon-map-marker"></i>Latitude: ' + sessionStorage.lat + 
+  '<br><i class="icon-map-marker"></i>Longitude: ' + sessionStorage.lng;  
+     x.innerHTML = tempString;
   }
   getLocation();
   showPosition();

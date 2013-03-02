@@ -3,9 +3,10 @@
 @section('content')
 <section class="content container">
 	<h1>Topplistan</h1>	
-	<p> här hittar du pubbarna med högst betyg </p>
+	<p class="info-block"> Här hittar du de pubar som fått högst betyg av våra användare</p>
 
-	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->	
+	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->
+	<!--Används för att sortera en array-->	
 	<?php function subval_sort($a,$subkey) {
 			foreach($a as $k=>$v) {
 				$b[$k] = strtolower($v[$subkey]);
@@ -16,7 +17,6 @@
 			}
 		return $c;
 		}
-
 		$pub_ratings = subval_sort($pub_ratings,'rating'); 	
 	?>	
 

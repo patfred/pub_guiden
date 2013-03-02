@@ -1,10 +1,8 @@
 @layout('layouts/main')
 @section('content')
 <section class="content container">
-	<h1>
-		Topplistor
-	</h1>
-	
+	<h1> Övriga topplistor </h1>
+	<p class="info-block"> Hitta pubar baserat på användarbetyg genom att välja en kategori </p>
 	<a href="<?php echo URL::to_action('list_pubs@top_list_service') ?>">
 			<div class='home-menu content-holder'>
 				Service

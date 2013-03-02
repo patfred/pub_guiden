@@ -2,15 +2,17 @@
 
 @section('content')
 <section class="content container">
-	<h2>Pubar nära dig</h2>
-	<p>Din position:	
-	<p id="demo"></p>
-	<p id="json_test"></p>
-	<ul class="pub-list">
+	<h1>Pubar nära dig</h1>
+	<p class="info-block">Din position:
+
+	<!-- geo-info shows current position for user -->
+		<span id="geo-info"></span>
+	</p>
+	<ol class="top-list">
 		@foreach($pubs as $pub)
-			<li>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }}<span id="pub_<?php echo $pub->id; ?>"></span></li>
+			<li>{{ HTML::link_to_action("pubs@index", $pub->name, array($pub->id)) }}<span id="pub_{{ $pub->id}}"><i class="icon-double-angle-right"></i></span></li>
 		@endforeach
-	</ul>
+	</ol>
 </section>
 @endsection
 @section('scripts')
@@ -20,7 +22,7 @@
 				var myLat = sessionStorage.lat;
 				var myLong = sessionStorage.lng;
 				for(var i=0; i<result.length; i++){
-					$('#pub_' + (i+1) ).append("<p>Du är " + calc_dist(myLat, myLong, result[i].attributes.latitude, result[i].attributes.longitude ) + " meter ifrån " + result[i].attributes.name + "</p>")
+					$('#pub_' + (i+1) ).append("Du är " + calc_dist(myLat, myLong, result[i].attributes.latitude, result[i].attributes.longitude ) + " meter ifrån " + result[i].attributes.name)
 						
 				}
 			} else { 

@@ -2,9 +2,9 @@
 
 @section('content')
 <section class="content container">
-	<h2>Topplistan - Utbud</h2>	
+	<h1>Topplistan - Utbud</h1>	
 
-	<p>Pubar sorterade på högst betyg inom utbud</p>
+	<p class="info-block">Pubar sorterade på högst betyg inom utbud</p>
 
 	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->
 	

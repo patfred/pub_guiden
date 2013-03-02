@@ -2,9 +2,7 @@
 @section('content')
 	<section class="content container">	
 
-		<div class="content-badge">   
-		
-		</div>
+		<p class="info-block"> Välkommen till Göteborgs bästa pubguide! </p>
 		<a href="<?php echo URL::to_action('list_pubs@top20') ?>">
 			<div class='home-menu content-holder'>
 				Topplistan

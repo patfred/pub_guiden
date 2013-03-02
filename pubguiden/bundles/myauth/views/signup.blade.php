@@ -2,9 +2,9 @@
 @section('content')
 <section class="content container login-signup">
 
-    <h2>Registrera dig!</h2>
-    <p>För att kunna betygsätta och kommentera pubar behöver du registrera dig! </p> 
-    <p>Observera att lösenordet måste innehålla minst 5 tecken.</p>
+    <h1>Registrera dig!</h1>
+    <p class="info-block">För att kunna betygsätta och kommentera pubar behöver du registrera dig! </p> 
+    <p class="info-block">Observera att lösenordet måste innehålla minst 5 tecken.</p>
 
     {{ Form::open(Config::get('myauth::config.bundle_route') . '/' . Config::get('myauth::config.signup_route')) }}
 

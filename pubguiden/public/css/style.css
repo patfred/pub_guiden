@@ -6,7 +6,7 @@
 	General
 ------------------------*/
 
-body, div, input, li, p, ul, button{
+body, div, input, li, p, ul, button, textarea{
 	font-family: 'museo_slab', serif;
 	line-height: normal;
 }
@@ -129,6 +129,9 @@ input{
 /*-----------------------
 	Content
 ------------------------*/
+.info-block{
+	margin: 20px 0;
+}
 .group-holder{
 	background: whitesmoke;
 	padding:5px 20px 5px 20px;
@@ -165,19 +168,30 @@ input{
 	margin: 10px 0;
 }
 
+#geo-info{
+	display:block;
+	margin-top: 10px;
+}
+#geo-info i{
+	margin-right: 10px;
+}
 /*-----------------------
 	Pub-lists
 ------------------------*/
 .top-list{
-
+}
+.top-list span{
+	color:whitesmoke;
+	display:block;
+	margin-left: 25px;
+	margin-bottom: 10px;
 }
 ol.top-list{
 	counter-reset: li; /* Initiate a counter */
 	list-style: none; /* Remove default numbering */
 	*list-style: decimal; /* Keep using default numbering for IE6/7 */
 }
-.top-list li,
-.pub-list li{
+.top-list li, .pub-list li{
 	background: url('../img/bg.png');
 	position: relative;
 	margin-top: 5px;
@@ -189,8 +203,7 @@ ol.top-list{
   	padding: 5px 0 5px 0;
 }
 
-.top-list a,
-.pub-list a{
+.top-list a, .pub-list a{
 	position: relative;
 	display: block;
 	padding: .4em .4em .4em 2em;
@@ -292,7 +305,8 @@ ol.top-list{
 .comment-form input[type="submit"],
 .logout-button, 
 .user-buttons, 
-.rate-button{
+.rate-button,
+.search{
 	border:none;
 	margin-top: 5px;
 	margin-bottom: 15px;
@@ -317,7 +331,8 @@ ol.top-list{
 .comment-form input[type="submit"]:hover,
 .logout-button:hover, 
 .user-buttons:hover, 
-.rate-button:hover{
+.rate-button:hover,
+.search:hover{
 	-webkit-box-shadow: 0 8px 6px -6px #96af5b;
   	-moz-box-shadow: 0 8px 6px -6px #96af5b;
   	box-shadow: 0 8px 6px -6px #96af5b;
@@ -414,12 +429,16 @@ ol.top-list{
 	Comments
 ------------------------*/
 .comment-form{
-
+	padding: 0 15px 5px 0;
 }
 
 .comment-text{
 	width:100%;
 	height:80px;
+	padding:10px;
+	-webkit-box-shadow: 0 8px 6px -6px #000;
+  	-moz-box-shadow: 0 8px 6px -6px #000;
+  	box-shadow: 0 8px 6px -6px #000;
 }
 
 .comment{
@@ -460,9 +479,21 @@ ol.top-list{
 ------------------------*/
 footer{
 	margin-top:30px;
+	margin-bottom: 20px;
 	color:whitesmoke;
 }
 
+.admin-link{
+	position: relative;
+	display: inline-block;
+	float:right;
+}
+
+.copy{
+	position:relative;
+	display: inline-block;
+	float:left;
+}
 /*-----------------------
 	Styles for smaller devices
 ------------------------*/

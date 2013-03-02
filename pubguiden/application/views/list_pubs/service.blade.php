@@ -2,9 +2,9 @@
 
 @section('content')
 <section class="content container">
-	<h2>Topplistan - Service</h2>	
+	<h1>Topplistan - Service</h1>	
 
-	<p>Pubar sorterade på högst betyg på service</p>
+	<p class="info-block">Pubar sorterade på högst betyg på service</p>
 
 	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->
 	<?php function subval_sort($a,$subkey) {

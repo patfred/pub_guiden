@@ -2,7 +2,7 @@
 @section('content')
 <section class="content container login-signup">
 
-<h2>Logga in på pubguiden</h2>
+<h1>Logga in på pubguiden</h1>
 
 {{ Form::open(Config::get('myauth::config.bundle_route') . '/' . Config::get('myauth::config.login_route')) }}
     

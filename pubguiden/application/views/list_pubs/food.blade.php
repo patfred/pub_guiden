@@ -2,8 +2,8 @@
 
 @section('content')
 <section class="content container">
-	<h2>Topplistan - Mat</h2>	
-	<p>Pubar sorterade på högst betyg inom mat</p>
+	<h1>Topplistan - Mat</h1>	
+	<p class="info-block">Pubar sorterade på högst betyg inom mat</p>
 
 	<!--Försökte flytta detta till controllern men av någon anledning verkar det inte fungera-->
 	
